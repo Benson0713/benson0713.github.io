@@ -536,3 +536,4 @@ footer { align-items: center; }
   .viz .ctl { padding: 10px 12px; }
 }
 .viz .ctl[hidden] { display: none; }
+.rail .rail-toggle { margin: -12px 0 -4px 52px; }
