@@ -243,7 +243,8 @@
         var k = (j * n + i) * 4; d[k] = col[0]; d[k + 1] = col[1]; d[k + 2] = col[2]; d[k + 3] = 255;
       }
       var oc = document.createElement('canvas'); oc.width = n; oc.height = n; oc.getContext('2d').putImageData(img, 0, 0);
-      map = { cv: oc, L: L, peak: Math.pow(1 + 2 * aR, 2) + Math.pow(2 * aI, 2) };
+      var b0 = d.slice(0, 3);   // far-field colour, used to fill around the scaled map
+      map = { cv: oc, L: L, bg: 'rgb(' + b0[0] + ',' + b0[1] + ',' + b0[2] + ')', peak: Math.pow(1 + 2 * aR, 2) + Math.pow(2 * aI, 2) };
     }
     self.theme = function () { map = null; };
     self.animating = function () { return playing; };
@@ -260,13 +261,15 @@
       var narrow = W < 560, s = narrow ? Math.min(W - 40, H * 0.46) : Math.min(H - 56, W * 0.38);
       var mx = narrow ? (W - s) / 2 : 22, my = narrow ? 14 : (H - s) / 2 - 6;
       // --- near-field map
-      c.save(); roundRect(c, mx, my, s, s, 10); c.clip(); c.imageSmoothingEnabled = true; c.drawImage(map.cv, mx, my, s, s); c.restore();
-      var cx = mx + s / 2, cy = my + s / 2, rad = s / (2 * map.L);
+      // true scale: the box spans 2 x 1.9 x 15 nm; the sphere (and its quasi-static field, which scales with R) grow with R
+      var RMAX = 15, kS = R / RMAX, cx = mx + s / 2, cy = my + s / 2, rad = s / (2 * map.L) * kS, ms = s * kS;
+      c.save(); roundRect(c, mx, my, s, s, 10); c.clip(); c.fillStyle = map.bg; c.fillRect(mx, my, s, s);
+      c.imageSmoothingEnabled = true; c.drawImage(map.cv, cx - ms / 2, cy - ms / 2, ms, ms); c.restore();
       var gg = c.createRadialGradient(cx - rad * 0.35, cy - rad * 0.4, rad * 0.08, cx, cy, rad);
       gg.addColorStop(0, '#fbe7a6'); gg.addColorStop(0.45, '#d9a93f'); gg.addColorStop(1, '#8a6417');
       c.fillStyle = gg; c.beginPath(); c.arc(cx, cy, rad, 0, TAU); c.fill();
       c.strokeStyle = 'rgba(90,64,12,0.55)'; c.lineWidth = 1; c.beginPath(); c.arc(cx, cy, rad, 0, TAU); c.stroke();
-      text(c, 'Au', cx, cy + 5, 'rgba(60,40,5,0.7)', SERIF(Math.max(13, rad * 0.32)), 'center');
+      if (rad > 16) text(c, 'Au', cx, cy + 5, 'rgba(60,40,5,0.7)', SERIF(Math.max(13, rad * 0.32)), 'center');
       // oscillating surface charge, band thickness = 0.1 nm cover layer relative to R
       var phase = TAU * 0.55 * tt, amp = Math.cos(phase), band = clamp(rad * 0.1 / R, 1.2, rad * 0.5);
       for (var q = 0; q < 96; q++) {
@@ -281,6 +284,9 @@
       var ay = my + s - 16; c.beginPath(); c.moveTo(mx + 14, ay); c.lineTo(mx + 46, ay); c.stroke();
       c.beginPath(); c.moveTo(mx + 46, ay); c.lineTo(mx + 40, ay - 4); c.lineTo(mx + 40, ay + 4); c.closePath(); c.fill();
       text(c, 'E₀', mx + 52, ay + 4, P.ink2, MONO);
+      var nmpx = s / (2 * map.L * RMAX), sbx = mx + s - 14 - 10 * nmpx;   // 10 nm scale bar
+      c.strokeStyle = P.ink2; c.lineWidth = 2; c.beginPath(); c.moveTo(sbx, ay); c.lineTo(sbx + 10 * nmpx, ay); c.stroke();
+      text(c, '10 nm', sbx + 5 * nmpx, ay - 7, P.ink2, MONO_S, 'center');
       text(c, 'R = ' + R.toFixed(1) + ' nm', mx + 12, my + 20, P.ink, MONO);
       text(c, '|E/E₀|² ≤ ' + Math.round(map.peak), mx + s - 12, my + 20, P.ink2, MONO_S, 'right');
       // --- spectrum
