@@ -53,3 +53,5 @@ as a full-page embed.
 | **Add a research project** | Copy a whole `<article class="card proj">` block. A static figure works too: replace the `.viz` block with `<figure class="viz"><img src="img/your-figure.webp" alt="…"><p class="cap">…</p></figure>`. |
 
 Then publish: `git add -A`, `git commit -m "update"` and `git push`. GitHub Pages refreshes in about a minute.
+
+**When you publish an update**, change the date-stamp in both `version.txt` and `BUILD` near the top of `index.html` (for example `2026-12-01-1`). Visitors' browsers then load the new version straight away instead of after up to 10 minutes.

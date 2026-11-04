@@ -28,6 +28,20 @@
     document.documentElement.classList.add('js');
   })();
 </script>
+<script>
+  /* Freshness check: GitHub Pages lets browsers reuse a page for 10 minutes. version.txt is
+     fetched uncached; if it differs from this page's build, reload once from the network. */
+  (function () {
+    var BUILD = '2026-11-05-1';
+    try {
+      fetch('version.txt?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.text() : ''; }).then(function (v) {
+        v = (v || '').trim(); if (!v || v === BUILD) return;
+        var k = 'sp-reloaded-' + v; if (sessionStorage.getItem(k)) return; sessionStorage.setItem(k, '1');
+        var u = new URL(location.href); u.searchParams.set('r', v); location.replace(u.toString());
+      }).catch(function () {});
+    } catch (e) {}
+  })();
+</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Shaswat Pathak","jobTitle":"M.S. (Research) student, theoretical and computational physics","affiliation":{"@type":"CollegeOrUniversity","name":"Universiti Sains Malaysia"},"email":"mailto:shaswatpathak.qm.researcher@gmail.com","sameAs":["https://scholar.google.com/citations?user=rNq_DQEAAAAJ","https://orcid.org/0009-0003-9455-277X","https://github.com/Shaswat-qm-researcher","https://www.researchgate.net/profile/Shaswat-Pathak-3","https://www.linkedin.com/in/shaswat-pathak-qm-researcher/"]}
 </script>
