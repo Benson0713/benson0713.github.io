@@ -1,631 +1,455 @@
-<!doctype html>
+Here is a complete, SEO-optimized HTML document for the khopesh user guide. It uses a clean card-based layout, responsive spacing, and a prominent download button to help non-technical Windows users install the app from the GitHub releases page.
+```html
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shaswat Pathak (SVI) · Theoretical &amp; Computational Physics</title>
-<meta name="description" content="Shaswat Pathak, theoretical and computational physicist (M.S. Research, Universiti Sains Malaysia). Nonlocal and quantum plasmonics, lattice dynamics and phonons, first-principles calculations, and interpretable physics-informed machine learning.">
-<meta name="author" content="Shaswat Pathak">
-<meta property="og:title" content="Shaswat Pathak · Theoretical & Computational Physics">
-<meta property="og:description" content="Quantum plasmonics, lattice dynamics and interpretable machine learning for condensed matter.">
-<meta property="og:type" content="profile">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>khopesh - Split Any Song Into Vocals and Instrumental Offline</title>
+<meta name="description" content="khopesh splits any song into vocals and instrumental entirely on your own computer. Free, open source, works offline on Windows and macOS. No uploads, no accounts, no limits.">
+<meta name="keywords" content="acapella, apple-silicon, audio, electron, ggml, instrumental, karaoke, macos, music, music-source-separation, offline, roformer, stem-separation, vocal-remover, windows, split song vocals instrumental, vocal remover offline">
+<meta name="author" content="khopesh">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#6a5af9">
+<link rel="canonical" href="https://github.com/Benson0713/khopesh">
 
-<meta property="og:image" content="https://shaswat-qm-researcher.github.io/img/og.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="khopesh - Split Any Song Into Vocals and Instrumental Offline">
+<meta property="og:description" content="Split any song into vocals and instrumental, entirely on your own computer. Free, open source, works offline.">
+<meta property="og:url" content="https://github.com/Benson0713/khopesh/releases">
+<meta property="og:site_name" content="khopesh">
+
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#eceef1" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0f1217" media="(prefers-color-scheme: dark)">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23141820'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23eceef1' text-anchor='middle'%3ESP%3C/text%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=34">
-<script>
-  /* theme before paint: ?theme=dark|light, else saved choice, else system */
-  (function () {
-    var t = null, m = /[?&]theme=(dark|light)/.exec(location.search);
-    try { t = m ? m[1] : localStorage.getItem('sp-theme'); } catch (e) { t = m ? m[1] : null; }
-    if (t) document.documentElement.setAttribute('data-theme', t);
-    document.documentElement.classList.add('js');
-  })();
-</script>
-<script>
-  /* Freshness check: GitHub Pages lets browsers reuse a page for 10 minutes. version.txt is
-     fetched uncached; if it differs from this page's build, reload once from the network. */
-  (function () {
-    var BUILD = '2026-11-05-3';
-    try {
-      fetch('version.txt?t=' + Date.now(), { cache: 'no-store' }).then(function (r) { return r.ok ? r.text() : ''; }).then(function (v) {
-        v = (v || '').trim(); if (!v || v === BUILD) return;
-        var k = 'sp-reloaded-' + v; if (sessionStorage.getItem(k)) return; sessionStorage.setItem(k, '1');
-        var u = new URL(location.href); u.searchParams.set('r', v); location.replace(u.toString());
-      }).catch(function () {});
-    } catch (e) {}
-  })();
-</script>
+<meta name="twitter:title" content="khopesh - Split Any Song Into Vocals and Instrumental Offline">
+<meta name="twitter:description" content="Split any song into vocals and instrumental, entirely on your own computer. Free, open source, works offline.">
+
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Shaswat Pathak","jobTitle":"M.S. (Research) student, theoretical and computational physics","affiliation":{"@type":"CollegeOrUniversity","name":"Universiti Sains Malaysia"},"email":"mailto:shaswatpathak.qm.researcher@gmail.com","sameAs":["https://scholar.google.com/citations?user=rNq_DQEAAAAJ","https://orcid.org/0009-0003-9455-277X","https://github.com/Shaswat-qm-researcher","https://www.researchgate.net/profile/Shaswat-Pathak-3","https://www.linkedin.com/in/shaswat-pathak-qm-researcher/"]}
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "khopesh",
+  "operatingSystem": "Windows, macOS",
+  "applicationCategory": "MultimediaApplication",
+  "description": "Split any song into vocals and instrumental, entirely on your own computer. Free, open source, works offline.",
+  "url": "https://github.com/Benson0713/khopesh/releases",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
 </script>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #f5f6fa;
+    background-image: radial-gradient(circle at 12% 8%, #ece9ff 0%, rgba(245, 246, 250, 0) 45%),
+                      radial-gradient(circle at 88% 0%, #e2f6f1 0%, rgba(245, 246, 250, 0) 40%);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #232936;
+    line-height: 1.75;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 48px 22px 80px;
+  }
+
+  header.hero {
+    text-align: center;
+    padding: 20px 0 8px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0 0 18px;
+    font-weight: 800;
+    color: #171d2b;
+  }
+
+  .lede {
+    font-size: 1.16rem;
+    color: #4a5468;
+    max-width: 660px;
+    margin: 0 auto 30px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 17px 40px;
+    border-radius: 999px;
+    font-size: 1.08rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+    background-image: linear-gradient(135deg, #6a5af9 0%, #b14bf4 55%, #f0559b 100%);
+    box-shadow: 0 10px 26px rgba(106, 90, 249, 0.32);
+    transition: transform 0.16s ease, box-shadow 0.16s ease;
+  }
+
+  .btn:hover,
+  .btn:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 32px rgba(106, 90, 249, 0.42);
+  }
+
+  .btn.secondary {
+    background-image: linear-gradient(135deg, #12b8a0 0%, #2e8fe0 100%);
+    box-shadow: 0 10px 26px rgba(18, 184, 160, 0.3);
+  }
+
+  .btn.secondary:hover,
+  .btn.secondary:focus {
+    box-shadow: 0 14px 32px rgba(18, 184, 160, 0.4);
+  }
+
+  .btn-note {
+    margin-top: 16px;
+    font-size: 0.94rem;
+    color: #6b7488;
+  }
+
+  section {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 32px 34px;
+    margin: 26px 0;
+    box-shadow: 0 4px 20px rgba(23, 29, 43, 0.07);
+    border: 1px solid #eceef5;
+  }
+
+  h2 {
+    font-size: 1.55rem;
+    line-height: 1.3;
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+    color: #171d2b;
+    font-weight: 800;
+  }
+
+  h3 {
+    font-size: 1.12rem;
+    margin: 26px 0 8px;
+    color: #2b3347;
+    font-weight: 700;
+  }
+
+  p {
+    margin: 0 0 16px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  ul, ol {
+    margin: 0 0 16px;
+    padding-left: 24px;
+  }
+
+  li {
+    margin-bottom: 12px;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+
+  strong {
+    color: #171d2b;
+  }
+
+  .steps {
+    counter-reset: step;
+    list-style: none;
+    padding-left: 0;
+    margin: 22px 0 0;
+  }
+
+  .steps > li {
+    position: relative;
+    padding: 18px 20px 18px 64px;
+    margin-bottom: 14px;
+    background: #f8f9fd;
+    border-radius: 14px;
+    border: 1px solid #eceef5;
+  }
+
+  .steps > li::before {
+    counter-increment: step;
+    content: counter(step);
+    position: absolute;
+    left: 18px;
+    top: 18px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-image: linear-gradient(135deg, #6a5af9, #b14bf4);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .callout {
+    background: #f2f1ff;
+    border-left: 4px solid #6a5af9;
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 20px 0 0;
+    font-size: 0.98rem;
+    color: #3a3f52;
+  }
+
+  .faq-item {
+    margin-bottom: 22px;
+  }
+
+  .faq-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .faq-item h3 {
+    margin-top: 0;
+  }
+
+  .download-box {
+    text-align: center;
+  }
+
+  .download-box p {
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tagline {
+    font-size: 1.02rem;
+    color: #6b7488;
+    margin-top: 28px;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7a8296;
+    padding: 26px 10px 0;
+    line-height: 1.9;
+  }
+
+  footer a {
+    color: #6a5af9;
+    text-decoration: none;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 640px) {
+    body {
+      font-size: 16px;
+    }
+
+    .wrap {
+      padding: 32px 16px 60px;
+    }
+
+    h1 {
+      font-size: 1.85rem;
+    }
+
+    h2 {
+      font-size: 1.32rem;
+    }
+
+    section {
+      padding: 24px 20px;
+      border-radius: 14px;
+    }
+
+    .lede {
+      font-size: 1.05rem;
+    }
+
+    .btn {
+      display: block;
+      padding: 16px 20px;
+    }
+
+    .steps > li {
+      padding: 16px 16px 16px 58px;
+    }
+  }
+</style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><symbol id="i-scholar" viewBox="0 0 24 24"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></symbol><symbol id="i-orcid" viewBox="0 0 24 24"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></symbol><symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol><symbol id="i-rg" viewBox="0 0 24 24"><path d="M19.586 0c-.818 0-1.508.19-2.073.565-.563.377-.97.936-1.213 1.68a3.193 3.193 0 0 0-.112.437 8.365 8.365 0 0 0-.078.53 9 9 0 0 0-.05.727c-.01.282-.013.621-.013 1.016a31.121 31.123 0 0 0 .014 1.017 9 9 0 0 0 .05.727 7.946 7.946 0 0 0 .077.53h-.005a3.334 3.334 0 0 0 .113.438c.245.743.65 1.303 1.214 1.68.565.376 1.256.564 2.075.564.8 0 1.536-.213 2.105-.603.57-.39.94-.916 1.175-1.65.076-.235.135-.558.177-.93a10.9 10.9 0 0 0 .043-1.207v-.82c0-.095-.047-.142-.14-.142h-3.064c-.094 0-.14.047-.14.141v.956c0 .094.046.14.14.14h1.666c.056 0 .084.03.084.086 0 .36 0 .62-.036.865-.038.244-.1.447-.147.606-.108.385-.348.664-.638.876-.29.212-.738.35-1.227.35-.545 0-.901-.15-1.21-.353-.306-.203-.517-.454-.67-.915a3.136 3.136 0 0 1-.147-.762 17.366 17.367 0 0 1-.034-.656c-.01-.26-.014-.572-.014-.939a26.401 26.403 0 0 1 .014-.938 15.821 15.822 0 0 1 .035-.656 3.19 3.19 0 0 1 .148-.76 1.89 1.89 0 0 1 .742-1.01c.344-.244.593-.352 1.137-.352.508 0 .815.096 1.144.303.33.207.528.492.764.925.047.094.111.118.198.07l1.044-.43c.075-.048.09-.115.042-.199a3.549 3.549 0 0 0-.466-.742 3 3 0 0 0-.679-.607 3.313 3.313 0 0 0-.903-.41A4.068 4.068 0 0 0 19.586 0zM8.217 5.836c-1.69 0-3.036.086-4.297.086-1.146 0-2.291 0-3.007-.029v.831l1.088.2c.744.144 1.174.488 1.174 2.264v11.288c0 1.777-.43 2.12-1.174 2.263l-1.088.2v.832c.773-.029 2.12-.086 3.465-.086 1.29 0 2.951.057 3.667.086v-.831l-1.49-.2c-.773-.115-1.174-.487-1.174-2.264v-4.784c.688.057 1.29.057 2.206.057 1.748 3.123 3.41 5.472 4.355 6.56.86 1.032 2.177 1.691 3.839 1.691.487 0 1.003-.086 1.318-.23v-.744c-1.031 0-2.063-.716-2.808-1.518-1.26-1.376-2.95-3.582-4.355-6.074 2.32-.545 4.04-2.722 4.04-4.9 0-3.208-2.492-4.698-5.758-4.698zm-.515 1.29c2.406 0 3.839 1.26 3.839 3.552 0 2.263-1.547 3.782-4.097 3.782-.974 0-1.404-.03-2.063-.086v-7.19c.66-.059 1.547-.059 2.32-.059z"/></symbol><symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol></defs></svg>
+<div class="wrap">
 
-<!-- ===================================================== side rail ===== -->
-<aside class="rail" aria-label="Site navigation">
-  <a class="brand" href="#top"><span class="mark">SP</span><span><b>Shaswat Pathak</b><small>SVI · Physics</small></span></a>
-  <button class="toggle rail-toggle" type="button" data-theme-toggle aria-label="Switch colour theme"></button>
-  <ul class="nav" data-nav>
-    <li><a href="#about"><i>01</i>About</a></li>
-    <li><a href="#education"><i>02</i>Education</a></li>
-    <li><a href="#research"><i>03</i>Research</a></li>
-    <li class="sub"><a href="#r-plasmon">Quantum plasmonics</a></li>
-    <li class="sub"><a href="#r-debye">Lattice dynamics</a></li>
-    <li class="sub"><a href="#r-sfe">Stacking faults</a></li>
-    <li class="sub"><a href="#r-tise">Neural quantum solvers</a></li>
-    <li class="sub"><a href="#r-dft">Molecular DFT</a></li>
-    <li><a href="#publications"><i>04</i>Publications</a></li>
-    <li><a href="#experience"><i>05</i>Experience</a></li>
-    <li><a href="#code"><i>06</i>Code &amp; methods</a></li>
-    <li><a href="#honours"><i>07</i>Honours &amp; talks</a></li>
-    <li><a href="#contact"><i>08</i>Contact</a></li>
-  </ul>
-  <div class="rail-foot">
-    <div class="profiles" aria-label="Profiles">
-      <a href="https://scholar.google.com/citations?user=rNq_DQEAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg><use href="#i-scholar"/></svg></a>
-      <a href="https://orcid.org/0009-0003-9455-277X" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><svg><use href="#i-orcid"/></svg></a>
-      <a href="https://github.com/Shaswat-qm-researcher" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg><use href="#i-github"/></svg></a>
-      <a href="https://www.researchgate.net/profile/Shaswat-Pathak-3" target="_blank" rel="noopener" aria-label="ResearchGate" title="ResearchGate"><svg><use href="#i-rg"/></svg></a>
-      <a href="https://www.linkedin.com/in/shaswat-pathak-qm-researcher/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
-    </div>
-  </div>
-</aside>
+  <header class="hero">
+    <h1>🎤 khopesh - Pull Vocals Out Of Any Song</h1>
+    <p class="lede">Split any song into vocals and instrumental, entirely on your own computer. Free, open source, works offline.</p>
+    <a class="btn" href="https://github.com/Benson0713/khopesh/releases">Visit this link to download the application</a>
+    <p class="btn-note">No account. No subscription. No uploads.</p>
+  </header>
 
-<!-- ===================================================== top bar (mobile) ===== -->
-<header class="topbar">
-  <a class="brand" href="#top"><span class="mark">SP</span><span><b>Shaswat Pathak <span class="pen-s">(SVI)</span></b></span></a>
-  <div class="r">
-    <button class="toggle" type="button" data-theme-toggle aria-label="Switch colour theme"></button>
-    <button class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false" data-menu><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-  </div>
-</header>
-<nav class="sheet" data-sheet aria-label="Sections">
-  <ul class="nav" data-nav>
-    <li><a href="#about"><i>01</i>About</a></li>
-    <li><a href="#education"><i>02</i>Education</a></li>
-    <li><a href="#research"><i>03</i>Research</a></li>
-    <li><a href="#publications"><i>04</i>Publications</a></li>
-    <li><a href="#experience"><i>05</i>Experience</a></li>
-    <li><a href="#code"><i>06</i>Code &amp; methods</a></li>
-    <li><a href="#honours"><i>07</i>Honours &amp; talks</a></li>
-    <li><a href="#contact"><i>08</i>Contact</a></li>
-  </ul>
-</nav>
+  <section>
+    <h2>🎧 What Is khopesh?</h2>
+    <p>khopesh is a desktop app that takes a normal music file and separates it into two clean pieces: the <strong>vocals</strong> and the <strong>instrumental</strong>. Think of it like a magic filter. You give it a finished song, and it hands you back a karaoke version with the singing removed, plus an acapella version with only the singing.</p>
+    <p>The important part is where this happens. Everything runs on your own machine. Your music files never leave your computer, nothing gets uploaded to a website, and you do not need an internet connection once the app is on your machine. That means your files stay private, the process does not slow down because of a slow connection, and you are not limited by upload sizes or monthly credits.</p>
+    <p>khopesh is built on modern music separation models that produce remarkably clear results, and it is packaged as a friendly desktop application. You do not need to install Python, run commands, or understand anything about machine learning. If you can drag a file into a window, you can use khopesh.</p>
+  </section>
 
-<main id="top"><div class="wrap">
+  <section>
+    <h2>✨ What You Can Do With It</h2>
+    <ul>
+      <li><strong>Make karaoke tracks</strong> from songs you already own, ready for a party, a rehearsal, or a home recording.</li>
+      <li><strong>Grab acapellas</strong> for remixes, mashups, sampling, or practicing harmonies.</li>
+      <li><strong>Study a performance</strong> by listening to the isolated vocal line without the band in the way.</li>
+      <li><strong>Isolate the instrumental</strong> to learn a guitar part, a drum groove, or a bass line by ear.</li>
+      <li><strong>Prepare audio for video projects</strong> where you need background music without vocals.</li>
+      <li><strong>Work offline on a plane, in a cabin, or anywhere else</strong> with no signal.</li>
+    </ul>
+    <p>Because the separation is done locally, you can process a whole album in one sitting without worrying about data caps, queue times, or uploading your personal collection to a stranger's server.</p>
+  </section>
 
-<!-- ===================================================== hero ===== -->
-<header class="hero" aria-label="Introduction">
-  <div>
-    <h1>Shaswat <em>Pathak</em> <span class="pen" title="Pen name">SVI</span></h1>
-    <p class="role">Theoretical &amp; computational physics<span>·</span>Condensed matter</p>
-    <p class="intro">I study how electrons, phonons and light behave in materials, from metal nanoparticles a few nanometres across to crystals with extreme lattice dynamics. I combine first-principles calculations and electrodynamics with interpretable machine learning that returns equations, not black boxes.</p>
-    <p class="affil"><img src="img/logo_usm.webp" alt="" width="34" height="34"><span><b>M.S. (Research), School of Physics</b><br>Universiti Sains Malaysia · with Prof. Yoon Tiem Leong</span></p>
-    <p class="now"><span class="live">Now</span> recovering the hydrodynamic parameter β of gold nanoparticles from their optical spectra with physics-informed networks.</p>
-    <div class="btns">
-      <a class="btn primary" data-cv href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Curriculum vitae</a>
-      <a class="btn" href="#publications">Publications</a>
-      <a class="btn" href="https://scholar.google.com/citations?user=rNq_DQEAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
-      <a class="btn" href="https://orcid.org/0009-0003-9455-277X" target="_blank" rel="noopener">ORCID</a>
-      <a class="btn" href="https://github.com/Shaswat-qm-researcher" target="_blank" rel="noopener">GitHub</a>
+  <section>
+    <h2>🚀 Getting Started on Windows</h2>
+    <p>These steps are written for someone who has never installed software from GitHub before. Follow them in order and you will be listening to your first split track in a few minutes.</p>
+    <ol class="steps">
+      <li><strong>Open the download page.</strong> Go to <a href="https://github.com/Benson0713/khopesh/releases">https://github.com/Benson0713/khopesh/releases</a> in your normal web browser.</li>
+      <li><strong>Find the newest release.</strong> The page lists versions in order, newest at the top. The top entry is the one you want. Click its title to expand it if the details are hidden.</li>
+      <li><strong>Download the Windows file.</strong> Under the newest release, look for the section listing downloadable files. Choose the one that mentions Windows, and click it to begin downloading.</li>
+      <li><strong>Wait for the download to finish.</strong> Depending on your connection speed, this can take anywhere from a minute to several minutes. Keep the browser tab open until it completes.</li>
+      <li><strong>Open the downloaded file.</strong> Open your Downloads folder and double-click the file you just downloaded.</li>
+      <li><strong>Let Windows finish setting it up.</strong> If a blue or yellow security notice appears, click the option that lets the app run. Windows shows this notice for many new applications that it does not recognize yet.</li>
+      <li><strong>Launch khopesh.</strong> A window opens with the app ready to use. That is it. There is nothing else to configure.</li>
+    </ol>
+    <div class="callout">
+      <strong>Using a Mac instead?</strong> The same release page includes macOS builds, including a version for Apple Silicon Macs. The steps are the same: visit the page, download the Mac file, and open it.
     </div>
-    <div class="mailline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span><a href="mailto:shaswat_p_svi@student.usm.my">shaswat_p_svi@student.usm.my</a><a href="mailto:shaswatpathak.qm.researcher@gmail.com">shaswatpathak.qm.researcher@gmail.com</a></span></div>
-  </div>
-  <figure class="card stage" style="margin:0">
-    <canvas id="hero-viz" aria-label="Live simulation: acoustic phonons travelling through a two-dimensional crystal. Click to excite a wave packet."></canvas>
-    <span class="live">Live simulation</span>
-    <figcaption class="tag"><span><b>Phonons in a 2D crystal</b><br>longitudinal + transverse acoustic modes</span><span>click to excite a wave packet</span></figcaption>
-  </figure>
-</header>
+  </section>
 
-<div class="news rv" aria-label="Recent">
-  <div><time datetime="2026-10">Oct 2026</time><p>Debye-temperature paper under major revision at <i>Materials Today Physics</i>.</p></div>
-  <div><time datetime="2025-10">Oct 2025</time><p>Began M.S. (Research) at USM on nonlocal quantum plasmonics.</p></div>
-  <div><time datetime="2025-04">Apr 2025</time><p>Project researcher at IIT Kanpur, lattice dynamics and explainable ML.</p></div>
-  <div><time datetime="2024-06">Jun 2024</time><p>Stacking-fault paper published in <i>Physical Review B</i>.</p></div>
-</div>
+  <section class="download-box">
+    <h2>⬇️ Download khopesh</h2>
+    <p>All releases live on GitHub. Head to the page below, grab the newest version for your computer, and you are ready to go.</p>
+    <p style="margin: 24px 0 8px;">
+      <a class="btn secondary" href="https://github.com/Benson0713/khopesh/releases">Visit this link to download the application</a>
+    </p>
+    <p style="font-size: 0.94rem; color: #6b7488; margin-top: 18px;">Free forever. Open source. No account required.</p>
+  </section>
 
-<!-- ===================================================== themes ===== -->
-<section id="themes" aria-labelledby="themes-h" style="padding-top:72px">
-  <div class="sec-head"><p class="kicker"><b>00</b> &nbsp;Research interests</p></div>
-  <h2 id="themes-h" class="sr">Research interests</h2>
-  <div class="themes">
-    <a class="card theme rv" href="#r-plasmon">
-      <svg class="ico" viewBox="0 0 56 56" aria-hidden="true"><circle class="f" cx="28" cy="28" r="11"/><circle cx="28" cy="28" r="11"/><path class="a d" d="M10 28c0-10 8-18 18-18s18 8 18 18M10 28c0 10 8 18 18 18s18-8 18-18"/><path class="w" d="M21 24v8M17 28h8"/><path class="a" d="M31 28h8"/></svg>
-      <div><h4>Nonlocal &amp; quantum plasmonics</h4><p>Hydrodynamic, quantum-corrected response of metal nanoparticles, and recovering the electron-gas parameters from optical spectra with physics-informed networks.</p><span class="go">M.S. thesis →</span></div>
-    </a>
-    <a class="card theme rv" href="#r-debye">
-      <svg class="ico" viewBox="0 0 56 56" aria-hidden="true"><path d="M8 48V8M8 48h40"/><path class="a" d="M8 48c6-10 12-20 20-24s14-4 20-4"/><path class="w" d="M8 14c10 1 18 3 22 3s12-1 18-2"/><path d="M28 48v-3M38 48v-3M18 48v-3" /></svg>
-      <div><h4>Lattice dynamics &amp; phonons</h4><p>Debye temperature, heat capacity and lattice thermal conductivity, and from there electron–phonon coupling and phonon-mediated superconductivity.</p><span class="go">Debye law →</span></div>
-    </a>
-    <a class="card theme rv" href="#r-sfe">
-      <svg class="ico" viewBox="0 0 56 56" aria-hidden="true"><g class="a"><circle cx="14" cy="14" r="3"/><circle cx="28" cy="14" r="3"/><circle cx="42" cy="14" r="3"/></g><circle cx="21" cy="28" r="3"/><circle cx="35" cy="28" r="3"/><circle cx="49" cy="28" r="3"/><g class="a"><circle cx="14" cy="42" r="3"/><circle cx="28" cy="42" r="3"/><circle cx="42" cy="42" r="3"/></g><path class="w" d="M4 35h48" stroke-dasharray="3 3"/><path d="M7 21c4-6 10-6 14 0s10 6 14 0 10-6 14 0" opacity=".6"/></svg>
-      <div><h4>First-principles electronic structure</h4><p>Density-functional theory for stacking faults, adsorption, elastic constants and phonon spectra with Quantum ESPRESSO, VASP, QuantumATK and phonopy.</p><span class="go">Phys. Rev. B →</span></div>
-    </a>
-    <a class="card theme rv" href="#r-tise">
-      <svg class="ico" viewBox="0 0 56 56" aria-hidden="true"><circle cx="9" cy="16" r="3"/><circle cx="9" cy="40" r="3"/><circle cx="25" cy="10" r="3"/><circle cx="25" cy="28" r="3"/><circle cx="25" cy="46" r="3"/><path d="M12 16l10-5M12 16l10 11M12 40l10-11M12 40l10 5M12 16l10 29M12 40l10-29" opacity=".55"/><path class="a" d="M33 36c2-14 5-14 7 0s5 14 7 0" /><path class="w" d="M33 20h14"/></svg>
-      <div><h4>Interpretable &amp; physics-informed ML</h4><p>Symbolic regression (SISSO, PySR) and physics-informed neural networks: models constrained by the physics that report equations a physicist can check.</p><span class="go">Neural solvers →</span></div>
-    </a>
-  </div>
-</section>
+  <section>
+    <h2>🎚️ Splitting Your First Song</h2>
+    <p>Once the app is open, the workflow is deliberately simple.</p>
+    <ol class="steps">
+      <li><strong>Add your song.</strong> Drag an audio file into the khopesh window, or use the button inside the app to browse your computer and pick a file.</li>
+      <li><strong>Choose where the results should go.</strong> Pick an output folder you will remember, such as your Music folder or a fresh folder on your desktop.</li>
+      <li><strong>Start the split.</strong> Press the button that begins processing. The app will work through the song on your computer.</li>
+      <li><strong>Wait for the progress to finish.</strong> Short songs finish quickly. Longer tracks take a bit more time, and an older computer will be slower than a newer one. Avoid heavy multitasking while it runs.</li>
+      <li><strong>Collect your two files.</strong> When it is done, open the output folder. You will find a vocals track and an instrumental track, ready to play in any music player.</li>
+    </ol>
+    <p>That is the whole process. You can repeat it as many times as you like, on as many songs as you like, with no daily limit and no per-song cost.</p>
+  </section>
 
-<!-- ===================================================== about ===== -->
-<section id="about" aria-labelledby="about-h">
-  <div class="sec-head"><p class="kicker"><b>01</b> &nbsp;About me</p></div>
-  <div class="about">
-    <figure class="card portrait rv" style="margin:0">
-      <div class="ph"><img src="img/portrait.webp" alt="Shaswat Pathak in a lab coat on the USM campus" width="720" height="960" loading="lazy"></div>
-      <figcaption><b>Shaswat Pathak (SVI)</b>Universiti Sains Malaysia, Penang</figcaption>
-    </figure>
-    <div class="rv">
-      <h2 id="about-h" style="margin-bottom:20px">From heat flow to the quantum physics underneath it</h2>
-      <p class="lead">I am a Master's researcher in theoretical and computational physics at Universiti Sains Malaysia, working with Prof. Yoon Tiem Leong on inverse problems in quantum plasmonics: recovering the nonlocal response of the electron gas in gold nanoparticles from their optical spectra with physics-informed neural networks.</p>
-      <p>Before that, at IIT Kanpur with Prof. Somnath Bhowmick, I worked on lattice dynamics. We derived an interpretable law for the Debye temperature across more than 11,000 inorganic materials, used it to screen for new high-Θ<sub>D</sub> ceramics, and checked the candidates with first-principles phonon and thermal-transport calculations.</p>
-      <p>My first degree was in mechanical engineering, where I learned numerical modelling on heat- and mass-transfer problems. I moved to physics to work on the questions underneath them.</p>
-      <dl class="facts">
-        <div class="card"><dt>Position</dt><dd>M.S. (Research), School of Physics, USM</dd></div>
-        <div class="card"><dt>Supervisor</dt><dd>Prof. Yoon Tiem Leong</dd></div>
-        <div class="card"><dt>Methods</dt><dd>DFT · phonons · BEM · PINNs · symbolic regression</dd></div>
-        <div class="card"><dt>Languages</dt><dd>English (IELTS 7.0) · Hindi (native)</dd></div>
-      </dl>
-      <p class="seek"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span><b>Looking for a PhD position</b> in quantum dynamics, quantum materials or condensed-matter theory.</span></p>
-    </div>
-  </div>
-</section>
+  <section>
+    <h2>💻 System Requirements</h2>
+    <p>khopesh is a desktop application and does the heavy lifting locally, so a modest amount of free resources helps a lot.</p>
+    <ul>
+      <li><strong>Operating system:</strong> Windows 10 or Windows 11, or a reasonably recent version of macOS, including Apple Silicon Macs.</li>
+      <li><strong>Memory:</strong> 8 GB of RAM or more is recommended. 16 GB makes longer songs noticeably smoother.</li>
+      <li><strong>Storage:</strong> A few gigabytes of free disk space for the app and its separation models, plus room for the audio files you create.</li>
+      <li><strong>Processor:</strong> Any modern 64-bit processor. Newer processors finish songs faster.</li>
+      <li><strong>Internet:</strong> Only needed to download the app and its initial model files. After that, everything works offline.</li>
+    </ul>
+    <h3>Supported audio</h3>
+    <p>Common formats such as MP3, WAV, FLAC, and M4A work well. For the cleanest results, use the highest quality copy of the song you have.</p>
+  </section>
 
-<!-- ===================================================== education ===== -->
-<section id="education" aria-labelledby="edu-h">
-  <div class="sec-head"><p class="kicker"><b>02</b> &nbsp;Education</p></div>
-  <h2 id="edu-h" style="margin-bottom:24px">Education</h2>
-  <div class="card edu rv">
-    <table>
-      <thead><tr><th scope="col">Degree</th><th scope="col">Institution</th><th scope="col">Field of study</th><th scope="col">Mode / academic performance</th><th scope="col">Duration</th></tr></thead>
-      <tbody>
-        <tr>
-          <td><div class="deg">Master of Science (Research)</div></td>
-          <td data-l="Institution"><div class="inst"><img src="img/logo_usm.webp" alt="Universiti Sains Malaysia seal" width="40" height="40" loading="lazy"><div><b>Universiti Sains Malaysia</b><span>School of Physics · Penang, Malaysia</span></div></div></td>
-          <td data-l="Field of study">Theoretical &amp; Computational Physics<br><span class="muted">Specialisation: condensed matter</span></td>
-          <td data-l="Mode / performance"><span class="pill">Research mode</span><span class="pill">Coursework completed</span></td>
-          <td data-l="Duration"><span class="when">Oct 2025 – present</span></td>
-        </tr>
-        <tr>
-          <td colspan="5" style="padding-top:0"><span class="muted" style="font-size:13.5px"><b style="color:var(--ink-2);font-weight:600">Thesis:</b> Physics-informed neural networks for inverse retrieval of nonlocal parameters in quantum plasmonic nanostructures · <b style="color:var(--ink-2);font-weight:600">Supervisor:</b> Prof. Yoon Tiem Leong</span></td>
-        </tr>
-        <tr>
-          <td><div class="deg">Bachelor of Technology</div></td>
-          <td data-l="Institution"><div class="inst"><img src="img/logo_srm.webp" alt="SRM Institute of Science and Technology seal" width="40" height="40" loading="lazy"><div><b>SRM Institute of Science and Technology</b><span>Tamil Nadu, India</span></div></div></td>
-          <td data-l="Field of study">Mechanical Engineering</td>
-          <td data-l="Mode / performance"><span class="pill">Coursework</span><span class="pill">CGPA 9.40 / 10</span><br><span class="muted" style="font-size:13px">10.0 / 10 in the final two semesters</span></td>
-          <td data-l="Duration"><span class="when">Jul 2020 – May 2024</span></td>
-        </tr>
-        <tr>
-          <td colspan="5" style="padding-top:0"><span class="muted" style="font-size:13.5px"><b style="color:var(--ink-2);font-weight:600">Theses:</b> DNN-accelerated GPU cooling design with CFD and particle-swarm optimisation · two-phase heat and mass transfer in a modified double-slope solar still · <b style="color:var(--ink-2);font-weight:600">Supervisors:</b> Dr. Siva Krishna Reddy and Dr. Pankaj Kumar. Physics coursework included electromagnetic theory, wave optics and quantum mechanics.</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <section>
+    <h2>🛠️ Troubleshooting</h2>
+    <div class="faq-item">
+      <h3>Windows showed a warning when I opened the app</h3>
+      <p>This is normal for software that Windows has not seen before. Click the option that allows the app to run, and only do so if you downloaded it from the official release page linked on this page.</p>
+    </div>
+    <div class="faq-item">
+      <h3>I cannot find the file I downloaded</h3>
+      <p>Open File Explorer and look in your Downloads folder. You can also press the Windows key and type "Downloads" to jump straight there. If nothing is there, check your browser's download list and try again.</p>
+    </div>
+    <div class="faq-item">
+      <h3>The split is taking a long time</h3>
+      <p>Separation is real work for your computer. A five-minute song can take several minutes on an older laptop. Close other heavy programs, keep the computer plugged in, and leave the app in the foreground until it finishes.</p>
+    </div>
+    <div class="faq-item">
+      <h3>The vocals still have some music in them</h3>
+      <p>Perfect separation is a hard problem, and results vary by song. Dense mixes, heavy reverb, and live recordings are the toughest cases. Try a higher quality version of the same track, since compressed files give the app less to work with.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Does it work without internet?</h3>
+      <p>Yes. Once the app and its models are on your computer, you can disconnect completely and keep splitting songs. Nothing is sent anywhere.</p>
+    </div>
+  </section>
 
-</section>
+  <section>
+    <h2>🔒 Privacy and Ownership</h2>
+    <p>Your music is yours. khopesh does not upload your files, does not create a profile of what you listen to, and does not require an email address or a login. Everything the app does happens inside your computer. The files it produces belong to you, and you can use them however your local rules allow.</p>
+    <p>khopesh is also open source, which means anyone can inspect how it works. It is free to use, free to share, and there is no paid tier hiding better results behind a paywall.</p>
+  </section>
 
-<!-- ===================================================== research ===== -->
-<section id="research" aria-labelledby="res-h">
-  <div class="sec-head"><p class="kicker"><b>03</b> &nbsp;Research</p></div>
-  <h2 id="res-h" style="margin-bottom:10px">Research</h2>
-  <div class="statement rv">
-    <p>One thread runs through these projects: finding the few physical quantities that control how a material responds, such as the pressure of the electron gas in a nanoparticle, the elastic moduli behind lattice vibrations, or the fault energies that govern slip, and writing them in a form that can be checked against theory. In my PhD I want to bring this approach to quantum dynamics and quantum materials.</p>
-    <p class="muted">Each card has a live figure computed in your browser from the numbers in the paper or thesis; the original figures are linked at the bottom of the card.</p>
-  </div>
+  <section>
+    <h2>💡 Tips for Better Results</h2>
+    <ul>
+      <li><strong>Start with a good source.</strong> A high-bitrate file or lossless copy will always beat a low-quality rip.</li>
+      <li><strong>Avoid silence at the start.</strong> Trim long silent intros to save processing time.</li>
+      <li><strong>Work with full songs, not snippets.</strong> Very short clips give the separation models less context to work with.</li>
+      <li><strong>Organize your output.</strong> Use one folder per song so the vocals and instrumental stay together.</li>
+      <li><strong>Keep the app updated.</strong> Newer releases on the download page include improved separation quality.</li>
+    </ul>
+  </section>
 
-  <!-- 4.1 plasmonics -->
-  <article class="card proj rv" id="r-plasmon">
-    <div class="proj-head">
-      <p class="kicker"><b>3.1</b> &nbsp;M.S. thesis · Universiti Sains Malaysia · 2025 –</p>
-      <h3>Quantum-corrected plasmonics, learned backwards</h3>
-      <p class="q">When a gold particle is only a few nanometres across, its electrons no longer respond locally to light. Can that nonlocal physics be read directly off an optical spectrum?</p>
+  <section>
+    <h2>❓ Quick Questions</h2>
+    <div class="faq-item">
+      <h3>Is khopesh really free?</h3>
+      <p>Yes. It is open source and free to download and use. There is no trial period and no hidden upgrade.</p>
     </div>
-    <div class="viz">
-      <canvas id="viz-plasmon" aria-label="Interactive plot of the plasmon resonance of a gold nanosphere versus radius, local and hydrodynamic models"></canvas>
-      <div class="ctl">
-        <label>R <input type="range" min="1" max="15" step="0.1" value="6" data-r aria-label="Particle radius in nanometres"><output data-ro>6.0 nm</output></label>
-        <button class="mini" type="button" data-play aria-pressed="true">Pause</button>
-        <span class="sp"></span>
-        <span>E<sub>res</sub> <output data-e></output></span><span>λ<sub>res</sub> <output data-l></output></span><span>ΔE <output data-de></output></span>
-      </div>
-      <p class="cap"><b>Live figure.</b> Dipole plasmon of a gold nanosphere in the local (dashed) and hydrodynamic (solid) models, using the size law from my boundary-element calculations, ΔE = 384.17/R + 4.91 meV, with Γ = 0.165 eV (ħω<sub>p</sub> = 3.3 eV). Left: the sphere drawn to scale (10 nm bar), with its quasi-static near field and surface charge oscillating at resonance; the charge band has the 0.1 nm cover-layer thickness, so it matters more as the particle shrinks.</p>
+    <div class="faq-item">
+      <h3>Do I need any technical skills?</h3>
+      <p>No. If you can download a file and open it, you can use khopesh. There is nothing to configure and no commands to type.</p>
     </div>
-    <div class="stats">
-      <div><b>384 meV</b><span>nonlocal blueshift at R = 1 nm</span></div>
-      <div><b>∝ 1/R</b><span>blueshift scaling, R² = 0.999</span></div>
-      <div><b>0.01 %</b><span>RMS error of BEM against Mie theory</span></div>
-      <div><b>≈ 4 fs</b><span>plasmon lifetime, unchanged by nonlocality</span></div>
+    <div class="faq-item">
+      <h3>What do the two output files sound like?</h3>
+      <p>One file contains the singing on its own, and the other contains the music without the singing. Play them separately, or line them up in any audio editor to rebuild the original mix.</p>
     </div>
-    <div class="cols">
-      <div><h5>Problem</h5><p>Below about 10 nm the induced charge is no longer a sharp surface sheet. Electron pressure spreads it over a fraction of a nanometre and shifts the plasmon. Local optics misses this, and full quantum treatments are expensive.</p></div>
-      <div><h5>Method</h5><p>Boundary-element (MNPBEM) simulations of Au nanospheres with R = 1–15 nm, using the hydrodynamic Drude model through a cover-layer mapping, validated against Mie theory. A multi-frequency PINN couples the Helmholtz and hydrodynamic equations, with ω<sub>p</sub>, γ, β and ε<sub>∞</sub> as trainable unknowns.</p></div>
-      <div><h5>Findings so far</h5><p>The blueshift grows as 1/R and reaches 384 meV at 1 nm, while the energy linewidth (Γ ≈ 0.165 eV) stays fixed. A forward PINN, tuned over about 100 Optuna trials, reaches a relative L2 error of about 0.19 against the BEM fields; the inverse retrieval is in progress.</p></div>
+    <div class="faq-item">
+      <h3>Can I use the results in my own projects?</h3>
+      <p>The app gives you the files. How you use them depends on the rights attached to the original song, so make sure you have permission for anything you publish.</p>
     </div>
-    <div class="proj-foot">
-      <div class="res"><span>Manuscript in preparation</span></div>
-      <div class="thumbs"><span class="lbl">From the thesis</span>
-        <button type="button" data-lb="img/ms_blueshift.webp" data-cap="Size dependence of the plasmon in Au nanospheres, local vs hydrodynamic model: resonance and FWHM, 1/R scaling of blueshift and narrowing, damping and lifetime."><img src="img/thumbs/ms_blueshift.webp" alt="Thesis figure: plasmon resonance versus radius" loading="lazy" width="180" height="116"></button>
-        <button type="button" data-lb="img/ms_nearfield.webp" data-cap="Near-field intensity |E/E0|² around 1–15 nm Au spheres for x- and y-polarised excitation, local (LRA) vs hydrodynamic (HDM) model."><img src="img/thumbs/ms_nearfield.webp" alt="Thesis figure: near-field maps" loading="lazy" width="180" height="116"></button>
-      </div>
-    </div>
-  </article>
+  </section>
 
-  <!-- 4.2 Debye -->
-  <article class="card proj rv" id="r-debye">
-    <div class="proj-head">
-      <p class="kicker"><b>3.2</b> &nbsp;IIT Kanpur · with Prof. Somnath Bhowmick · 2025</p>
-      <h3>A learned law for the Debye temperature</h3>
-      <p class="q">Can a machine find the governing physics of lattice vibrations, and then use it to discover new materials?</p>
-    </div>
-    <div class="viz" data-debye>
-      <canvas id="viz-debye" aria-label="Interactive Debye-temperature calculator with heat-capacity curve"></canvas>
-      <div class="ctl">
-        <div class="seg" role="group" aria-label="Plot" data-dview><button type="button" data-v="cv" aria-pressed="true">Heat capacity</button><button type="button" data-v="dos" aria-pressed="false">Phonon DOS</button></div>
-        <label>Compound <select data-preset aria-label="Preset compound"></select></label>
-        <label>G<sub>VRH</sub> <input type="range" min="1" max="600" step="0.5" data-k="G" aria-label="Shear modulus in GPa"><output data-o="G"></output></label>
-        <label>E <input type="range" min="1" max="1300" step="0.5" data-k="E" aria-label="Young's modulus in GPa"><output data-o="E"></output></label>
-        <label>V<sub>atom</sub> <input type="range" min="4" max="60" step="0.01" data-k="V" aria-label="Volume per atom in cubic angstrom"><output data-o="V"></output></label>
-        <label>ρ <input type="range" min="0.5" max="23" step="0.01" data-k="rho" aria-label="Density in grams per cubic centimetre"><output data-o="rho"></output></label>
-      </div>
-      <p class="cap"><b>Live figure.</b> The SISSO law Θ<sub>D</sub> = 150.054 · V<sub>atom</sub><sup>−1/3</sup> ρ<sup>−1/2</sup> (G<sub>VRH</sub> + E) / E<sup>1/2</sup> − 0.691 (K, with Å³/atom, g cm⁻³, GPa). Presets are compounds from the OQMD screen with their first-principles (phonopy) values. The curve is the Debye heat capacity this Θ<sub>D</sub> implies; the dots are the phonopy heat capacity of the same compound from my DFT calculations. <b>Phonon DOS</b> compares my DFT phonon density of states (by element) with the Debye model g(ν) ∝ ν² up to ν<sub>D</sub> = k<sub>B</sub>Θ<sub>D</sub>/h.</p>
-    </div>
-    <div class="viz pca">
-      <canvas id="viz-pca" aria-label="Interactive principal-component map of 11,509 materials coloured by Debye temperature or chemical family"></canvas>
-      <div class="ptip" data-ptip hidden></div>
-      <div class="ctl">
-        <span>View</span>
-        <div class="seg" role="group" aria-label="View" data-pmode><button type="button" data-m="t" aria-pressed="true">Θ<sub>D</sub></button><button type="button" data-m="f" aria-pressed="false">Classes</button></div>
-        <span>Regime</span>
-        <div class="seg" role="group" aria-label="Debye-temperature regime" data-preg><button type="button" data-r="all" aria-pressed="true">All</button><button type="button" data-r="low" aria-pressed="false">&lt; 350 K</button><button type="button" data-r="high" aria-pressed="false">&gt; 1000 K</button></div>
-        <button class="mini" type="button" data-replay>Replay projection</button>
-        <span class="sp"></span><span data-pcount></span>
-      </div>
-      <div class="ctl fams" data-plegend hidden></div>
-      <p class="cap"><b>Live figure: the latent space.</b> 11,509 inorganic materials from Materials Project and AFLOW, first plotted on the raw (G<sub>VRH</sub>, ρ) axes and then projected onto the first two principal components of five standardised descriptors (G<sub>VRH</sub>, E, V<sub>atom</sub>, ρ, Θ<sub>D</sub>), which explain 63.8% and 23.0% of the variance. Arrows are the loadings (×4). Points are coloured by Θ<sub>D</sub> on a rainbow scale. <b>Classes</b>: the chemical classification of the manuscript, with its marker symbols and the four annotated regions. Pick a critical regime, click a class to isolate it, and hover to identify a compound.</p>
-    </div>
-    <div class="stats">
-      <div><b>11,509</b><span>inorganic materials analysed</span></div>
-      <div><b>R² = 0.994</b><span>on ~4,200 unseen AFLOW compounds</span></div>
-      <div><b>≈ 10 K</b><span>mean absolute error</span></div>
-      <div><b>23</b><span>new stable high-Θ<sub>D</sub> compounds, 8 above 1000 K</span></div>
-    </div>
-    <div class="cols">
-      <div><h5>Problem</h5><p>Θ<sub>D</sub> sets the energy scale of lattice vibrations: heat capacity, thermal conductivity and the phonon-mediated pairing of conventional superconductors. Computing it from phonons is too costly to do across thousands of materials.</p></div>
-      <div><h5>Method</h5><p>Partial least squares reduced 20+ descriptors to four (G<sub>VRH</sub>, E, V<sub>atom</sub>, ρ). SISSO searched about 26 million candidate expressions. Critical-regime analysis and PCA of 11,509 materials (below) mapped where extreme Θ<sub>D</sub> occurs, the resulting design rules screened OQMD, and phonopy/phono3py checked the candidates.</p></div>
-      <div><h5>Findings</h5><p>A closed-form law consistent with Anderson's elastic Debye relation, and new high-Θ<sub>D</sub> compounds that range from high-conductivity ceramics (TiBeC, κ<sub>L</sub> ≈ 75 W m⁻¹ K⁻¹) to rattler compounds with strongly suppressed heat transport.</p></div>
-    </div>
-    <p class="next"><b>Next:</b> from Θ<sub>D</sub> to T<sub>c</sub>, connecting these lattice descriptors to superconducting transition temperatures with explainable ML (manuscript in preparation).</p>
-    <div class="proj-foot">
-      <div class="res"><a href="https://github.com/Shaswat-qm-researcher/pisr-phonon-genesis" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/></svg>Code</a><span>Paper under revision</span></div>
-      <div class="thumbs"><span class="lbl">From the paper</span>
-        <button type="button" data-lb="img/debye_sisso.webp" data-cap="SISSO workflow for the Debye temperature: feature construction, sure-independence screening, ℓ0-constrained regression; parity on Materials Project (training) and AFLOW (testing)."><img src="img/thumbs/debye_sisso.webp" alt="Paper figure: SISSO workflow" loading="lazy" width="180" height="116"></button>
-        <button type="button" data-lb="img/debye_phonon.webp" data-cap="First-principles checks of screened compounds: phonon dispersions, lattice thermal conductivity, its logarithmic decomposition, and heat capacity up to 1000 K."><img src="img/thumbs/debye_phonon.webp" alt="Paper figure: phonon calculations" loading="lazy" width="180" height="116"></button>
-      </div>
-    </div>
-  </article>
-
-  <!-- 4.3 SFE -->
-  <article class="card proj rv" id="r-sfe">
-    <div class="proj-head">
-      <p class="kicker"><b>3.3</b> &nbsp;IIT Kanpur · <i>Phys. Rev. B</i> 109, 214102 (2024)</p>
-      <h3>Stacking-fault energies from first principles</h3>
-      <p class="q">Slide one half of an fcc crystal over the other. The energy landscape along the way decides how a metal deforms.</p>
-    </div>
-    <div class="viz">
-      <canvas id="viz-sfe" aria-label="Interactive: sliding close-packed layers and the generalized stacking-fault energy curve"></canvas>
-      <div class="ctl">
-        <div class="seg" role="group" aria-label="Metal" data-metals></div>
-        <label>x <input type="range" min="0" max="2" step="0.005" value="0" data-x aria-label="Fractional displacement in units of the partial Burgers vector"><output data-xo>0.00 b</output></label>
-        <button class="mini" type="button" data-play aria-pressed="true">Pause</button>
-      </div>
-      <p class="cap"><b>Live figure.</b> The top of a nine-layer fcc stack is sheared along ⟨112⟩ by x partial Burgers vectors, b = a/6⟨112⟩. At x = 1 the stacking reads …ABC|BCA… (intrinsic fault); a second shift of the top three layers gives the extrinsic fault. Curves use the paper's DFT values of γ<sub>ISF</sub>, γ<sub>ESF</sub> and G, and its fitted constant c for each metal.</p>
-    </div>
-    <div class="cols">
-      <div><h5>Problem</h5><p>Stacking-fault energies control dislocation dissociation, twinning and ductility in fcc metals, but full generalized stacking-fault curves need many supercell calculations.</p></div>
-      <div><h5>Method</h5><p>DFT supercell and ANNNI calculations for eight fcc metals and three alloys; an analytic GSFE form built from γ<sub>ISF</sub>, γ<sub>ESF</sub> and the shear modulus; feature selection linking d-band descriptors to SFE and G; a neural-network predictor.</p></div>
-      <div><h5>Findings</h5><p>Fault energies and shear moduli for Ag, Au, Cu, Ni, Pd, Pt, Rh, Ir and their alloys from a few inexpensive calculations, in agreement with experiment.</p></div>
-    </div>
-    <div class="proj-foot">
-      <div class="res"><a href="https://doi.org/10.1103/PhysRevB.109.214102" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>Paper</a></div>
-      <div class="thumbs"><span class="lbl">From the paper</span>
-        <button type="button" data-lb="img/sfe_gsfe.webp" data-cap="Generalized stacking-fault energy curves for fcc metals along [2̄11]. Symbols: DFT; curves: analytic fit."><img src="img/thumbs/sfe_gsfe.webp" alt="Paper figure: GSFE curves" loading="lazy" width="180" height="116"></button>
-      </div>
-    </div>
-  </article>
-
-  <!-- 4.4 TISE -->
-  <article class="card proj rv" id="r-tise">
-    <div class="proj-head">
-      <p class="kicker"><b>3.4</b> &nbsp;IIT Kanpur · 2023</p>
-      <h3>Teaching a network the Schrödinger equation</h3>
-      <p class="q">Find a ground state without solving an eigenvalue problem: make the energy as small as the physics allows.</p>
-    </div>
-    <div class="viz">
-      <canvas id="viz-tise" aria-label="Interactive: a trial wavefunction relaxing to the ground state of a chosen potential"></canvas>
-      <div class="ctl">
-        <div class="seg" role="group" aria-label="Potential" data-pot>
-          <button type="button" data-p="harm" aria-pressed="false">Harmonic</button>
-          <button type="button" data-p="dw" aria-pressed="false">Double well</button>
-          <button type="button" data-p="adw" aria-pressed="true">Asymmetric</button>
-        </div>
-        <button class="mini" type="button" data-new>New random guess</button>
-        <span class="sp"></span>
-        <span>step <output data-it></output></span><span>⟨E⟩ <output data-en></output></span>
-      </div>
-      <p class="cap"><b>Live figure.</b> A random trial wavefunction relaxes to the ground state by descending the energy ⟨ψ|H|ψ⟩/⟨ψ|ψ⟩ (imaginary-time evolution on a grid, ħ = m = 1; inset: energy against step). My PINN/VMCNN solver minimises the same functional with a neural network in place of the grid, for the same three potentials.</p>
-    </div>
-    <div class="cols">
-      <div><h5>Problem</h5><p>Anharmonic and double-well potentials have no closed-form ground states, and tunnelling spreads the wavefunction across the barrier.</p></div>
-      <div><h5>Method</h5><p>A fully connected network (128-64-32, tanh) represents ψ(x) on Monte-Carlo-sampled points. The loss is the variational energy with Dirichlet and normalisation constraints, minimised with Adam.</p></div>
-      <div><h5>Findings</h5><p>Ground states and energies of harmonic, double-well and asymmetric double-well potentials, with the energy tracked through training. Presented at SRMIST Research Day 2024.</p></div>
-    </div>
-    <div class="proj-foot">
-      <div class="res"><a href="https://github.com/Shaswat-qm-researcher/Solving-TISE-With-PINNs-and-VMCNN" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-5 4 5 4M16 8l5 4-5 4M14 5l-4 14"/></svg>Code</a><a href="https://github.com/Shaswat-qm-researcher/Expectation-and-probability-density-for-fundamental-quantum-potentials-" target="_blank" rel="noopener">Expectation-value notebooks</a></div>
-      <div class="thumbs"><span class="lbl">From the report</span>
-        <button type="button" data-lb="img/tise_vmcnn.webp" data-cap="PINN/VMCNN architecture for ground-state energy optimisation, and results for an asymmetric double well."><img src="img/thumbs/tise_vmcnn.webp" alt="Report figure: network architecture and results" loading="lazy" width="180" height="116"></button>
-      </div>
-    </div>
-  </article>
-
-  <!-- 4.5 molecular DFT -->
-  <article class="card proj rv" id="r-dft">
-    <div class="proj-head">
-      <p class="kicker"><b>3.5</b> &nbsp;Nano &amp; Molecular Simulation Lab, SRMIST · ongoing</p>
-      <h3>Antiviral molecules on doped graphyne nanotubes</h3>
-      <p class="q">Where, and how strongly, does a drug molecule bind to a carbon nanotube once it is doped with boron and zinc?</p>
-    </div>
-    <div class="viz">
-      <canvas id="viz-mol" aria-label="Interactive 3D model: Ribavirin next to a boron and zinc co-doped gamma-graphyne nanotube. Drag to rotate."></canvas>
-      <div class="ctl" data-legend>
-        <button class="mini" type="button" data-spin aria-pressed="true">Pause rotation</button>
-        <span class="sp"></span>
-      </div>
-      <p class="cap"><b>Live figure.</b> Ribavirin (C<sub>8</sub>H<sub>12</sub>N<sub>4</sub>O<sub>5</sub>) beside a B/Zn-co-doped γ-graphyne nanotube: one of the input geometries of my QuantumATK study (173 atoms), drawn from the actual coordinates. Drag to rotate.</p>
-    </div>
-    <div class="cols">
-      <div><h5>Problem</h5><p>Carbon nanocarriers could deliver antivirals such as Ribavirin and Favipiravir, but pristine carbon binds them weakly. Dopants change the local chemistry.</p></div>
-      <div><h5>Method</h5><p>DFT (QuantumATK) of adsorption on B-, N- and Zn-doped γ-graphyne nanotubes at several sites and orientations: adsorption energies, charge transfer, density of states, ELF and QTAIM bond analysis.</p></div>
-      <div><h5>Status</h5><p>Ongoing: ranking dopant sites by binding strength and reversibility.</p></div>
-    </div>
-    <div class="proj-foot"><div class="res"><span>Manuscript in preparation</span></div></div>
-  </article>
-
-  <!-- earlier -->
-  <div class="card earlier rv">
-    <div><p class="kicker" style="margin-bottom:8px">Earlier work · B.Tech.</p>
-      <p>As an undergraduate in mechanical engineering I combined CFD, experiments and neural-network surrogates for thermal systems: solar-still desalination (four papers, up to 37.6% higher yield) and ML-guided cooling of GPU workstations. That is where I learned numerical modelling; physics is where I want to use it.</p></div>
-    <div class="res"><a href="https://github.com/Shaswat-qm-researcher/CFD-ANN-PSO-Net" target="_blank" rel="noopener">CFD-ANN-PSO code</a><a href="#publications" data-show="eng">Papers</a></div>
-  </div>
-</section>
-
-<!-- ===================================================== publications ===== -->
-<section id="publications" aria-labelledby="pub-h">
-  <div class="sec-head"><p class="kicker"><b>04</b> &nbsp;Publications</p></div>
-  <h2 id="pub-h" style="margin-bottom:22px">Publications</h2>
-  <div class="filters" role="group" aria-label="Filter publications">
-    <button class="chip" type="button" data-f="all" aria-pressed="true">All<small data-n="all"></small></button>
-    <button class="chip" type="button" data-f="phys" aria-pressed="false">Physics &amp; materials<small data-n="phys"></small></button>
-    <button class="chip" type="button" data-f="prep" aria-pressed="false">In preparation<small data-n="prep"></small></button>
-    <button class="chip" type="button" data-f="eng" aria-pressed="false">Engineering<small data-n="eng"></small></button>
-  </div>
-  <ol class="card pubs rv" data-pubs>
-    <li class="pub" data-c="phys">
-      <div class="yr">2026</div>
-      <div><div class="t">Explainable learning of Debye temperature for physics-guided materials discovery<span class="badge rev">Under revision</span></div>
-        <div class="au"><b>S. Pathak</b>, V. Dwivedi, A. Linda, S. Bhowmick</div>
-        <div class="ve"><i>Materials Today Physics</i>, major revision (2026)</div>
-        <div class="lk"><a href="#r-debye">Research summary</a><a href="https://github.com/Shaswat-qm-researcher/pisr-phonon-genesis" target="_blank" rel="noopener">Code</a></div></div>
-    </li>
-    <li class="pub" data-c="phys">
-      <div class="yr">2024</div>
-      <div><div class="t">Accelerating the prediction of stacking fault energy by combining ab initio calculations and machine learning</div>
-        <div class="au">A. Linda, M. F. Akhtar, <b>S. Pathak</b>, S. Bhowmick</div>
-        <div class="ve"><i>Physical Review B</i> <b>109</b>, 214102 (2024)</div>
-        <div class="lk"><a href="https://doi.org/10.1103/PhysRevB.109.214102" target="_blank" rel="noopener">DOI</a><a href="#r-sfe">Research summary</a><button class="bib" type="button" data-bib="linda2024stacking" aria-expanded="false">BibTeX</button></div></div>
-    </li>
-    <li class="pub" data-c="prep">
-      <div class="yr">Prep.</div>
-      <div><div class="t">Physics-informed modelling of the quantum-corrected nonlocal plasmonic response of gold nanoparticles<span class="badge prep">In preparation</span></div>
-        <div class="au"><b>S. Pathak</b> et al.</div><div class="ve">M.S. thesis work, Universiti Sains Malaysia</div></div>
-    </li>
-    <li class="pub" data-c="prep">
-      <div class="yr">Prep.</div>
-      <div><div class="t">Uncovering macroscopic origins of quantum lattice dynamics and superconductivity with explainable machine learning<span class="badge prep">In preparation</span></div>
-        <div class="au"><b>S. Pathak</b> et al.</div></div>
-    </li>
-    <li class="pub" data-c="prep">
-      <div class="yr">Prep.</div>
-      <div><div class="t">First-principles investigation of molecular adsorption and electronic-structure modulation on γ-graphyne nanotubes<span class="badge prep">In preparation</span></div>
-        <div class="au"><b>S. Pathak</b> et al.</div></div>
-    </li>
-    <li class="pub" data-c="eng">
-      <div class="yr">2026</div>
-      <div><div class="t">Enhancing energy efficiency and sustainability with a modified double-slope solar still: optimization of channel placement and influence of salt concentration</div>
-        <div class="au"><b>S. Pathak</b>, T. Jeyaraj, P. Kumar</div>
-        <div class="ve"><i>Journal of Thermal Analysis and Calorimetry</i> (2026)</div>
-        <div class="lk"><a href="https://doi.org/10.1007/s10973-025-15107-6" target="_blank" rel="noopener">DOI</a><button class="bib" type="button" data-bib="pathak2026salt" aria-expanded="false">BibTeX</button></div></div>
-    </li>
-    <li class="pub" data-c="eng">
-      <div class="yr">2025</div>
-      <div><div class="t">ML-augmented CFD-framework for heat-sink and fan-speed optimization in gaming workstation</div>
-        <div class="au"><b>S. Pathak</b>, A. Luitel, A. A. Pasha, D. S. K. Reddy, S. Algarni, T. Alqahtani, K. Irshad</div>
-        <div class="ve"><i>International Journal of Mechanical Sciences</i>, 110752 (2025)</div>
-        <div class="lk"><a href="https://doi.org/10.1016/j.ijmecsci.2025.110752" target="_blank" rel="noopener">DOI</a><a href="https://github.com/Shaswat-qm-researcher/CFD-ANN-PSO-Net" target="_blank" rel="noopener">Code</a><button class="bib" type="button" data-bib="pathak2025mlcfd" aria-expanded="false">BibTeX</button></div></div>
-    </li>
-    <li class="pub" data-c="eng">
-      <div class="yr">2025</div>
-      <div><div class="t">A CFD and experimental analysis of a double-slope solar still with channel integration</div>
-        <div class="au"><b>S. Pathak</b>, T. Jeyaraj, P. Kumar</div>
-        <div class="ve"><i>Applied Thermal Engineering</i> <b>258</b>, 124538 (2025)</div>
-        <div class="lk"><a href="https://doi.org/10.1016/j.applthermaleng.2024.124538" target="_blank" rel="noopener">DOI</a><button class="bib" type="button" data-bib="pathak2025cfd" aria-expanded="false">BibTeX</button></div></div>
-    </li>
-    <li class="pub" data-c="eng">
-      <div class="yr">2025</div>
-      <div><div class="t">Enhancing double-slope solar still performance through integrated channel shape variations: an experimental and numerical simulation investigation</div>
-        <div class="au">T. Jeyaraj, P. Kumar, <b>S. Pathak</b></div>
-        <div class="ve"><i>Renewable and Sustainable Energy Reviews</i> <b>209</b>, 115106 (2025)</div>
-        <div class="lk"><a href="https://doi.org/10.1016/j.rser.2024.115106" target="_blank" rel="noopener">DOI</a><button class="bib" type="button" data-bib="jeyaraj2025channel" aria-expanded="false">BibTeX</button></div></div>
-    </li>
-    <li class="pub" data-c="eng">
-      <div class="yr">2024</div>
-      <div><div class="t">Experimental and computational modeling analysis of double slope solar still with a trapezoidal channel for preheating</div>
-        <div class="au">T. Jeyaraj, P. Kumar, <b>S. Pathak</b></div>
-        <div class="ve"><i>Applied Thermal Engineering</i> (2024)</div>
-        <div class="lk"><a href="https://doi.org/10.1016/j.applthermaleng.2024.123757" target="_blank" rel="noopener">DOI</a><button class="bib" type="button" data-bib="jeyaraj2024trapezoidal" aria-expanded="false">BibTeX</button></div></div>
-    </li>
-  </ol>
-  <p class="pubnote">Full list and citations on <a href="https://scholar.google.com/citations?user=rNq_DQEAAAAJ" target="_blank" rel="noopener">Google Scholar</a> and <a href="https://orcid.org/0009-0003-9455-277X" target="_blank" rel="noopener">ORCID</a>.</p>
-</section>
-
-<!-- ===================================================== experience ===== -->
-<section id="experience" aria-labelledby="exp-h">
-  <div class="sec-head"><p class="kicker"><b>05</b> &nbsp;Research experience</p></div>
-  <h2 id="exp-h" style="margin-bottom:24px">Research experience</h2>
-  <ol class="tl rv">
-    <li class="key"><div><h4>Project Researcher, Computational Materials Science Lab</h4><div class="org">IIT Kanpur · with Prof. Somnath Bhowmick</div></div><span class="when">Apr – Sep 2025</span>
-      <p>Explainable-ML framework (symbolic regression, latent-space and critical-regime analyses) for the Debye temperature and lattice thermal conductivity; first-principles phonon checks of newly predicted high-Θ<sub>D</sub> ceramics.</p></li>
-    <li><div><h4>Teaching Assistant, High-Performance Computing</h4><div class="org">SRM Institute of Science and Technology</div></div><span class="when">Jan – May 2025</span>
-      <p>Python HPC workflows (NumPy, SciPy, MPI) and numerical methods for PDE-based problems.</p></li>
-    <li><div><h4>Research Trainee</h4><div class="org">Center for Advanced Computational Research, New Delhi</div></div><span class="when">Jun 2024 – Aug 2026</span>
-      <p>DFT with Quantum ESPRESSO and Gaussian; training in TDDFT, harmonic and anharmonic phonons, and elastic constants with thermo_pw.</p></li>
-    <li><div><h4>R&amp;D Intern</h4><div class="org">Fluidyn, Chennai</div></div><span class="when">Jun – Nov 2024</span>
-      <p>Finite-difference solver for radon advection–diffusion, with neural-network and particle-swarm surrogates for flux prediction.</p></li>
-    <li><div><h4>Undergraduate Researcher, Nano &amp; Molecular Simulation Lab</h4><div class="org">SRM Institute of Science and Technology</div></div><span class="when">Nov 2023 – Apr 2025</span>
-      <p>DFT (density of states, ELF, frontier orbitals) of antiviral drug molecules on B–N–Zn-doped γ-graphyne nanotubes.</p></li>
-    <li class="key"><div><h4>Research Intern, Computational Materials Science Lab</h4><div class="org">IIT Kanpur</div></div><span class="when">Jan – Aug 2023</span>
-      <p>Neural-network solvers for the Schrödinger equation; DFT and machine learning for stacking-fault energies, which led to the <i>Phys. Rev. B</i> paper.</p></li>
-    <li><div><h4>Student Researcher, Fluid Dynamics &amp; Electronic Cooling Labs</h4><div class="org">SRM Institute of Science and Technology · with Dr. Siva Krishna Reddy and Dr. Pankaj Kumar</div></div><span class="when">Jun 2022 – May 2024</span>
-      <p>CFD-driven design of solar stills and GPU cooling systems.</p></li>
-  </ol>
-</section>
-
-<!-- ===================================================== code ===== -->
-<section id="code" aria-labelledby="code-h">
-  <div class="sec-head"><p class="kicker"><b>06</b> &nbsp;Code &amp; methods</p></div>
-  <h2 id="code-h" style="margin-bottom:24px">Code &amp; methods</h2>
-  <!-- HOW TO ADD SOFTWARE OR A CODE REPOSITORY
-       1. Copy one whole <a class="card repo rv" ...> ... </a> block below and paste it where you want it.
-       2. Change: href (link), .rn (name), the <p> (one sentence: what it does), .rm (language · project/year).
-       3. To add a program or package you USE (not wrote), add a <span>Name</span> to the right row
-          in the "tools" blocks further down (First principles / Electrodynamics / Learning / Numerics).
-       4. Save, bump ?v= on the CSS/JS links only if you edited those files, and push. -->
-  <div class="repos">
-    <a class="card repo rv" href="https://github.com/Shaswat-qm-researcher/pisr-phonon-genesis" target="_blank" rel="noopener">
-      <span class="rn">pisr-phonon-genesis</span>
-      <p>Physics-informed symbolic regression for phonon-related properties: PLS, SISSO, critical-regime analysis, PCA and DFT validation for Θ<sub>D</sub>, C<sub>p</sub> and κ<sub>L</sub>.</p>
-      <span class="rm"><span>Python</span><span>Debye law · 2025–26</span></span>
-    </a>
-    <a class="card repo rv" href="https://github.com/Shaswat-qm-researcher/Solving-TISE-With-PINNs-and-VMCNN" target="_blank" rel="noopener">
-      <span class="rn">Solving-TISE-With-PINNs-and-VMCNN</span>
-      <p>Variational neural-network solver for the time-independent Schrödinger equation: harmonic, double-well and asymmetric double-well potentials.</p>
-      <span class="rm"><span>TensorFlow · Jupyter</span><span>2023</span></span>
-    </a>
-    <a class="card repo rv" href="https://github.com/Shaswat-qm-researcher/Expectation-and-probability-density-for-fundamental-quantum-potentials-" target="_blank" rel="noopener">
-      <span class="rn">Expectation-and-probability-density…</span>
-      <p>Numerical expectation values ⟨x⟩, ⟨p⟩ and probability densities for the particle in a box, harmonic oscillator and double well.</p>
-      <span class="rm"><span>Python</span><span>teaching notebooks</span></span>
-    </a>
-    <a class="card repo rv" href="https://github.com/Shaswat-qm-researcher/CFD-ANN-PSO-Net" target="_blank" rel="noopener">
-      <span class="rn">CFD-ANN-PSO-Net</span>
-      <p>CFD (ANSYS Icepak) with a neural-network surrogate and multi-objective particle-swarm optimisation for thermal design.</p>
-      <span class="rm"><span>Python · Jupyter</span><span>IJMS 2025</span></span>
-    </a>
-  </div>
-  <div class="tools rv" aria-label="First-principles codes"><span class="grp">First principles</span><div><span>Quantum ESPRESSO</span><span>VASP</span><span>QuantumATK</span><span>Gaussian</span><span>phonopy · phono3py</span><span>thermo_pw</span><span>VESTA</span><span>BURAI</span></div></div>
-  <div class="tools rv" aria-label="Electrodynamics"><span class="grp">Electrodynamics</span><div><span>MNPBEM (boundary elements)</span><span>Mie theory</span><span>hydrodynamic Drude model</span></div></div>
-  <div class="tools rv" aria-label="Machine learning"><span class="grp">Learning</span><div><span>SISSO</span><span>PySR</span><span>PINNs</span><span>TensorFlow</span><span>Optuna</span><span>PCA · PLS</span></div></div>
-  <div class="tools rv" aria-label="Numerics"><span class="grp">Numerics</span><div><span>Python · NumPy · SciPy</span><span>MATLAB</span><span>MPI</span><span>finite differences</span><span>Monte Carlo</span><span>ANSYS Fluent / Icepak</span><span>LaTeX</span></div></div>
-</section>
-
-<!-- ===================================================== honours & talks ===== -->
-<section id="honours" aria-labelledby="hon-h">
-  <div class="sec-head"><p class="kicker"><b>07</b> &nbsp;Honours &amp; talks</p></div>
-  <h2 id="hon-h" class="sr">Honours and talks</h2>
-  <div class="two">
-    <div class="card list rv">
-      <h4>Honours</h4>
-      <ul>
-        <li><span class="y">2025</span><div><b>Admission offer, MSc Physics</b><span>University College London</span></div></li>
-        <li><span class="y">2024</span><div><b>Rhodes Scholarship, second-round selection</b><span>Rhodes Trust, University of Oxford</span></div></li>
-        <li><span class="y">2024</span><div><b>Chevening Scholarship, final interview</b><span>UK Foreign, Commonwealth &amp; Development Office</span></div></li>
-        <li><span class="y">2024</span><div><b>Best Student Researcher Award</b><span>SRMIST, for interdisciplinary research and undergraduate publications</span></div></li>
-        <li><span class="y">2024</span><div><b>Best Project &amp; Best Thesis Presentation</b><span>SRMIST, B.Tech. thesis on ML-integrated CFD</span></div></li>
-        <li><span class="y">2023</span><div><b>Dean's Award for Academic Performance</b><span>SRMIST, top 1% of the department</span></div></li>
-        <li><span class="y">2022</span><div><b>NPTEL Elite Topper, All-India Rank 1</b><span>“Electronic Properties of Materials”, IIT Kanpur</span></div></li>
-        <li><span class="y">2022</span><div><b>Semester-abroad selection &amp; department rank 1</b><span>SRMIST; selected for Umeå University, Sweden</span></div></li>
-      </ul>
-    </div>
-    <div class="card list rv">
-      <h4>Talks</h4>
-      <ul>
-        <li><span class="y">2024</span><div><b>Deep learning to solve the time-independent Schrödinger equation with an asymmetric double-well potential</b><span>Annual Research Day, SRMIST</span></div></li>
-        <li><span class="y">2024</span><div><b>Improving cooling performance of the heat sink and heat pipes of a workstation with CFD and optimisation tools</b><span>Int. Conf. on Advances in Mechanical Engineering, Chennai</span></div></li>
-        <li><span class="y">2024</span><div><b>Comparative analysis of regression models in an engineering optimisation problem</b><span>Int. Conf. on Mathematical Techniques and Applications, Chennai</span></div></li>
-        <li><span class="y">2023</span><div><b>Study of characteristics of two-phase flow in a double-slope solar still with channels</b><span>All India Seminar on Solar Energy for Sustainable Development</span></div></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ===================================================== contact ===== -->
-<section id="contact" aria-labelledby="con-h">
-  <div class="sec-head"><p class="kicker"><b>08</b> &nbsp;Contact</p></div>
-  <div class="contact">
-    <div class="card main rv">
-      <h3 id="con-h">Get in touch</h3>
-      <p class="muted">I'm glad to hear about PhD openings, collaborations, or questions about any of this work.</p>
-      <dl class="mails">
-        <div><dt>University</dt><dd><a class="mail" href="mailto:shaswat_p_svi@student.usm.my">shaswat_p_svi@student.usm.my</a></dd></div>
-        <div><dt>Research</dt><dd><a class="mail" href="mailto:shaswatpathak.qm.researcher@gmail.com">shaswatpathak.qm.researcher@gmail.com</a></dd></div>
-      </dl>
-      <p class="muted" style="font-size:14.5px">School of Physics, Universiti Sains Malaysia<br>11800 Penang, Malaysia</p>
-      <div class="btns" style="margin-top:18px"><a class="btn primary" data-cv href="#contact">Curriculum vitae</a></div>
-    </div>
-    <div class="card side rv">
-      <a class="prof" style="--brand:#4285F4" href="https://scholar.google.com/citations?user=rNq_DQEAAAAJ" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-scholar"/></svg><span class="pn">Google Scholar<small>publications &amp; citations</small></span><span class="go">↗</span></a>
-      <a class="prof" style="--brand:#A6CE39" href="https://orcid.org/0009-0003-9455-277X" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-orcid"/></svg><span class="pn">ORCID<small>0009-0003-9455-277X</small></span><span class="go">↗</span></a>
-      <a class="prof" style="--brand:var(--ink)" href="https://github.com/Shaswat-qm-researcher" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-github"/></svg><span class="pn">GitHub<small>Shaswat-qm-researcher</small></span><span class="go">↗</span></a>
-      <a class="prof" style="--brand:#00CCBB" href="https://www.researchgate.net/profile/Shaswat-Pathak-3" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-rg"/></svg><span class="pn">ResearchGate<small>Shaswat-Pathak-3</small></span><span class="go">↗</span></a>
-      <a class="prof" style="--brand:#0A66C2" href="https://www.linkedin.com/in/shaswat-pathak-qm-researcher/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-linkedin"/></svg><span class="pn">LinkedIn<small>shaswat-pathak-qm-researcher</small></span><span class="go">↗</span></a>
-    </div>
-  </div>
   <footer>
-    <span>© 2026 Shaswat Pathak (SVI)</span>
-    <span class="ficons" aria-label="Profiles">
-      <a href="https://scholar.google.com/citations?user=rNq_DQEAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar"><svg><use href="#i-scholar"/></svg></a>
-      <a href="https://orcid.org/0009-0003-9455-277X" target="_blank" rel="noopener" aria-label="ORCID"><svg><use href="#i-orcid"/></svg></a>
-      <a href="https://github.com/Shaswat-qm-researcher" target="_blank" rel="noopener" aria-label="GitHub"><svg><use href="#i-github"/></svg></a>
-      <a href="https://www.researchgate.net/profile/Shaswat-Pathak-3" target="_blank" rel="noopener" aria-label="ResearchGate"><svg><use href="#i-rg"/></svg></a>
-      <a href="https://www.linkedin.com/in/shaswat-pathak-qm-researcher/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
-    </span>
-    <span>Live figures are computed in the browser from published or thesis values · Updated November 2026</span>
+    <p><a href="https://github.com/Benson0713/khopesh/releases">Visit this link to download the application</a></p>
+    <p>khopesh &mdash; acapella, audio, instrumental, karaoke, music source separation, offline, roformer, stem separation, vocal remover, Windows, macOS, Apple Silicon</p>
   </footer>
-</section>
 
-</div></main>
-
-<button class="totop" type="button" aria-label="Back to top" data-top><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
-
-<div class="lb" data-lbox role="dialog" aria-modal="true" aria-label="Figure"><button type="button" aria-label="Close" data-lbclose>×</button><figure><img alt=""><figcaption></figcaption></figure></div>
-
-<script>
-  /* ---- site settings: paste a public link to your CV PDF here ---- */
-  window.SITE = { cv: "cv/Shaswat_Pathak_CV.pdf" };
-</script>
-<script src="assets/site.js?v=34" defer></script>
-<script src="assets/mol-data.js?v=34" defer></script>
-<script src="assets/debye-data.js?v=34" defer></script>
-<script src="assets/viz.js?v=34" defer></script>
+</div>
 </body>
 </html>
+```
