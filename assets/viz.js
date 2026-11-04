@@ -814,10 +814,10 @@
   }
   // annotated regions of the manuscript figure (data units): cx, cy, rx, ry, rotation, label, label x, label y, colour
   var REGIONS = [
-    [-4.3, -1.4, 3.9, 1.15, -0.5, 'Alkali metals, H₂ and noble gases', -5.4, -3.55, '#d62828'],
-    [-1.9, 2.3, 1.5, 1.75, 0.15, 'Au, Hg compounds, lanthanides, actinides', -3.2, 4.45, '#555555'],
-    [4.4, 3.0, 4.0, 1.9, -0.08, 'Late-transition and f-block metal complexes', 11.6, 1.55, '#2f3fd0'],
-    [10.3, -2.7, 7.9, 1.25, 0.02, 'Early-transition beryllides, borides, carbides, nitrides', 10.6, -0.9, '#a020c8']
+    [-4.3, -1.4, 3.9, 1.15, -0.5, 'Alkali metals, H₂\nand noble gases', -6.3, -3.3, '#d62828'],
+    [-1.9, 2.3, 1.5, 1.75, 0.15, 'Au, Hg compounds,\nlanthanides, actinides', -4.6, 4.2, '#555555'],
+    [4.4, 3.0, 4.0, 1.9, -0.08, 'Late-transition and f-block\nmetal complexes', 11.9, 2.6, '#2f3fd0'],
+    [10.3, -2.7, 7.9, 1.25, 0.02, 'Early-transition beryllides,\nborides, carbides, nitrides', 13.9, -1.05, '#a020c8']
   ];
   var MARK = ['Cs', 'Rb', 'K', 'Na', 'Li', 'Xe', 'Kr', 'Ar', 'Os', 'Ir', 'Pt', 'Au', 'Hg', 'U', 'WC', 'TiB2', 'ReOs3', 'VN', 'C'];
   function PCA(cv) {
@@ -936,9 +936,11 @@
           var col = P.dark ? mix(R[8], '#ffffff', 0.4) : R[8];
           c.save(); c.translate(cx, cy); c.rotate(R[4]); c.beginPath(); c.ellipse(0, 0, rx, ry, 0, 0, TAU); c.restore();
           c.setLineDash([7, 5]); c.strokeStyle = col; c.lineWidth = 2; c.stroke(); c.setLineDash([]);
-          var font = '500 12px Inter, sans-serif'; c.font = font; var tw = c.measureText(R[5]).width, lx = clamp(mxF(R[6], XR), x0 + tw / 2 + 6, x1 - tw / 2 - 6), ly = myF(R[7], YR);
-          c.fillStyle = rgba(P.surface, 0.86); roundRect(c, lx - tw / 2 - 6, ly - 13, tw + 12, 18, 5); c.fill();
-          text(c, R[5], lx, ly, col, font, 'center');
+          var font = '500 12px Inter, sans-serif', lines = R[5].split('\n'), lh = 15; c.font = font;
+          var tw = Math.max.apply(null, lines.map(function (l) { return c.measureText(l).width; }));
+          var lx = clamp(mxF(R[6], XR), x0 + tw / 2 + 8, x1 - tw / 2 - 8), ly = clamp(myF(R[7], YR), y0 + 16, y1 - lh * (lines.length - 1) - 8);
+          c.fillStyle = rgba(P.surface, 0.9); roundRect(c, lx - tw / 2 - 7, ly - 14, tw + 14, lh * lines.length + 7, 6); c.fill();
+          lines.forEach(function (l, k) { text(c, l, lx, ly + k * lh, col, font, 'center'); });
         });
         D.marks.forEach(function (k) {
           if (!shown(k)) return;
