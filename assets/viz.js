@@ -794,6 +794,9 @@
   }
   // data order: Metal & Metalloid, Other, Oxides, Halides, Nitrides, Carbides, Borides, Single Element
   var FAM = [['#F28C28', 'square'], ['#1F3FD6', 'tri-down'], ['#F2E21B', 'plus'], ['#3BDA3B', 'diamond'], ['#E03CE0', 'star'], ['#D7263D', 'tri-up'], ['#38B6E8', 'cross'], ['#2E8B8B', 'circle']];
+  // dark theme: same hues, slightly deeper so saturated yellows/greens don't glare on the dark card
+  var FAM_DARK = ['#E07B1A', '#5C7CFF', '#D9C51A', '#2FBF4A', '#D64FD6', '#E0454F', '#3AA8D8', '#3FA3A3'];
+  function famCol(g) { return P.dark ? FAM_DARK[g] : FAM[g][0]; }
   function symPath(c, kind, x, y, r) {
     c.beginPath();
     if (kind === 'circle') c.arc(x, y, r, 0, TAU);
@@ -820,7 +823,7 @@
   function PCA(cv) {
     var root = cv.closest('.viz'), segM = root.querySelector('[data-pmode]'), segR = root.querySelector('[data-preg]'), replay = root.querySelector('[data-replay]');
     var legend = root.querySelector('[data-plegend]'), tip = root.querySelector('[data-ptip]'), count = root.querySelector('[data-pcount]');
-    var self = { el: cv, visible: false }, D = null, loading = false, mode = 'c', reg = 'all', fam = -1, prog = RM ? 1 : 0, t0 = null, hover = -1, field = null;
+    var self = { el: cv, visible: false }, D = null, loading = false, mode = 't', reg = 'all', fam = -1, prog = RM ? 1 : 0, t0 = null, hover = -1, field = null;
     var XR = [-8.5, 18], YR = [-4.3, 4.9], GXR = [-1, 6], GYR = [-1.5, 3.4], LSC = 4, L0 = Math.log10(17), L1 = Math.log10(2300);
     var LBL = { SM: 'G_{VRH}', YM: 'E', VPA: 'V_{atom}', D: 'ρ', DT: 'Θ_D' };
     function prep(Pd) {
@@ -865,7 +868,7 @@
       var oc = document.createElement('canvas'); oc.width = nx; oc.height = ny; oc.getContext('2d').putImageData(img, 0, 0);
       field = oc;
     }
-    function ready() { D = prep(window.PCA_DATA); buildField(); t0 = null; buildLegend(); self.draw(); kick(); }
+    function ready() { D = prep(window.PCA_DATA); t0 = null; buildLegend(); self.draw(); kick(); }
     function load() {
       if (D || loading) return;
       if (window.PCA_DATA) { ready(); return; }
@@ -902,9 +905,9 @@
       c.globalAlpha = 1;
       var shownN = 0, i, g, pass;
       if (mode === 'f') {                                   // classes: manuscript marker symbols
-        var r = W < 560 ? 2.6 : 3.4, edge = P.dark ? 'rgba(255,255,255,0.28)' : 'rgba(0,0,0,0.45)';
+        var r = W < 560 ? 2.6 : 3.4, edge = P.dark ? 'rgba(0,0,0,0.65)' : 'rgba(0,0,0,0.45)';
         for (pass = 0; pass < 2; pass++) for (g = 0; g < FAM.length; g++) {
-          c.fillStyle = FAM[g][0]; c.strokeStyle = edge; c.lineWidth = 0.6; c.globalAlpha = pass ? 0.95 : 0.06;
+          c.fillStyle = famCol(g); c.strokeStyle = edge; c.lineWidth = 0.6; c.globalAlpha = pass ? 0.95 : 0.06;
           for (i = 0; i < D.n; i++) {
             if (D.c[i] !== g) continue; var on = shown(i); if (on !== (pass === 1)) continue;
             if (pass) shownN++;
@@ -940,7 +943,7 @@
         D.marks.forEach(function (k) {
           if (!shown(k)) return;
           var px = PX(k), py = PY(k), isC = D.f[k] === 'C', lbl = isC ? 'C (allotropes)' : D.f[k].replace(/(\d+)/g, '_{$1}');
-          text(c, lbl, isC ? px - 6 : px + 6, py - 6, P.ink, '600 11.5px Inter, sans-serif', isC ? 'right' : 'left');
+          c.save(); c.shadowColor = P.surface; c.shadowBlur = 4; text(c, lbl, isC ? px - 6 : px + 6, py - 6, P.ink, '600 11.5px Inter, sans-serif', isC ? 'right' : 'left'); c.restore();
         });
       }
       if (e > 0.6) {                                        // loadings (biplot arrows, scaled x4)
@@ -962,7 +965,7 @@
       if (mode === 'f' && e > 0.95 && fam >= 0) {
         var cc = D.cen[fam], lx2 = mxF(cc[0], XR), ly2 = myF(cc[1], YR), nm = D.cats[fam];
         c.font = MONO_S; var tw2 = c.measureText(nm).width;
-        c.fillStyle = rgba(P.surface, 0.9); roundRect(c, lx2 - tw2 / 2 - 6, ly2 - 11, tw2 + 12, 17, 5); c.fill(); c.strokeStyle = FAM[fam][0]; c.lineWidth = 1.4; c.stroke();
+        c.fillStyle = rgba(P.surface, 0.9); roundRect(c, lx2 - tw2 / 2 - 6, ly2 - 11, tw2 + 12, 17, 5); c.fill(); c.strokeStyle = famCol(fam); c.lineWidth = 1.4; c.stroke();
         text(c, nm, lx2, ly2 + 1, P.ink, MONO_S, 'center');
       }
       c.restore();
@@ -980,7 +983,7 @@
         var gr = c.createLinearGradient(bx, 0, bx + bw, 0); TURBO.forEach(function (h, k) { gr.addColorStop(k / (TURBO.length - 1), h); });
         c.fillStyle = gr; c.fillRect(bx, by, bw, bh);
         [20, 100, 300, 1000].forEach(function (T) { var u = (Math.log10(T) - L0) / (L1 - L0); text(c, T + '', bx + u * bw, by + bh + 13, P.muted, MONO_S, 'center'); });
-        text(c, (mode === 'c' ? 'mean ' : '') + 'Θ_D (K, log scale)', bx + bw, by + bh + 27, P.faint, MONO_S, 'right');
+        text(c, 'Θ_D (K, log scale)', bx + bw, by + bh + 27, P.faint, MONO_S, 'right');
       }
       if (hover >= 0 && prog >= 1) { c.strokeStyle = P.ink; c.lineWidth = 1.5; c.beginPath(); c.arc(PX(hover), PY(hover), 7, 0, TAU); c.stroke(); }
       count.textContent = 'showing ' + shownN.toLocaleString() + ' of ' + D.n.toLocaleString();
@@ -1008,7 +1011,7 @@
     }
     function symImg(g) {
       var k = document.createElement('canvas'); k.width = k.height = 28; var x = k.getContext('2d'); x.scale(2, 2);
-      x.fillStyle = FAM[g][0]; x.strokeStyle = 'rgba(0,0,0,0.5)'; x.lineWidth = 0.8; symPath(x, FAM[g][1], 7, 7, 4.6); x.fill(); x.stroke();
+      x.fillStyle = famCol(g); x.strokeStyle = 'rgba(0,0,0,0.5)'; x.lineWidth = 0.8; symPath(x, FAM[g][1], 7, 7, 4.6); x.fill(); x.stroke();
       return '<img alt="" src="' + k.toDataURL() + '" width="14" height="14">';
     }
     function buildLegend() {
@@ -1024,6 +1027,7 @@
     seg(segM, 'data-m', function (v) { mode = v; fam = -1; buildLegend(); });
     seg(segR, 'data-r', function (v) { reg = v; });
     replay.addEventListener('click', function () { if (!D) { load(); return; } prog = 0; t0 = null; hover = -1; kick(); });
+    self.theme = function () { if (D) buildLegend(); };
     register(self);
     return self;
   }

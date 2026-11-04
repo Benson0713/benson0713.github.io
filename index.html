@@ -18,7 +18,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=27">
+<link rel="stylesheet" href="assets/site.css?v=30">
 <script>
   /* theme before paint: ?theme=dark|light, else saved choice, else system */
   (function () {
@@ -40,14 +40,14 @@
   <a class="brand" href="#top"><span class="mark">SP</span><span><b>Shaswat Pathak</b><small>SVI · Physics</small></span></a>
   <ul class="nav" data-nav>
     <li><a href="#about"><i>01</i>About</a></li>
-    <li><a href="#research"><i>02</i>Research</a></li>
+    <li><a href="#education"><i>02</i>Education</a></li>
+    <li><a href="#research"><i>03</i>Research</a></li>
     <li class="sub"><a href="#r-plasmon">Quantum plasmonics</a></li>
     <li class="sub"><a href="#r-debye">Lattice dynamics</a></li>
     <li class="sub"><a href="#r-sfe">Stacking faults</a></li>
     <li class="sub"><a href="#r-tise">Neural quantum solvers</a></li>
     <li class="sub"><a href="#r-dft">Molecular DFT</a></li>
-    <li><a href="#publications"><i>03</i>Publications</a></li>
-    <li><a href="#education"><i>04</i>Education</a></li>
+    <li><a href="#publications"><i>04</i>Publications</a></li>
     <li><a href="#code"><i>05</i>Code &amp; methods</a></li>
     <li><a href="#honours"><i>06</i>Honours &amp; talks</a></li>
     <li><a href="#contact"><i>07</i>Contact</a></li>
@@ -75,9 +75,9 @@
 <nav class="sheet" data-sheet aria-label="Sections">
   <ul class="nav" data-nav>
     <li><a href="#about"><i>01</i>About</a></li>
-    <li><a href="#research"><i>02</i>Research</a></li>
-    <li><a href="#publications"><i>03</i>Publications</a></li>
-    <li><a href="#education"><i>04</i>Education</a></li>
+    <li><a href="#education"><i>02</i>Education</a></li>
+    <li><a href="#research"><i>03</i>Research</a></li>
+    <li><a href="#publications"><i>04</i>Publications</a></li>
     <li><a href="#code"><i>05</i>Code &amp; methods</a></li>
     <li><a href="#honours"><i>06</i>Honours &amp; talks</a></li>
     <li><a href="#contact"><i>07</i>Contact</a></li>
@@ -91,11 +91,12 @@
   <div>
     <h1>Shaswat <em>Pathak</em> <span class="pen" title="Pen name">SVI</span></h1>
     <p class="role">Theoretical &amp; computational physics<span>·</span>Condensed matter</p>
-    <p class="intro">I love quantum mechanics for being at once so strange and so exact, and I use it to understand materials: how electrons, phonons and light behave in them, from metal nanoparticles a few nanometres across to crystals with extreme lattice dynamics. I combine first-principles calculations and electrodynamics with interpretable machine learning that returns equations, not black boxes.</p>
+    <p class="intro">I study how electrons, phonons and light behave in materials, from metal nanoparticles a few nanometres across to crystals with extreme lattice dynamics. I combine first-principles calculations and electrodynamics with interpretable machine learning that returns equations, not black boxes.</p>
     <p class="affil"><img src="img/logo_usm.webp" alt="" width="34" height="34"><span><b>M.S. (Research), School of Physics</b><br>Universiti Sains Malaysia · with Prof. Yoon Tiem Leong</span></p>
     <p class="now"><span class="live">Now</span> recovering the hydrodynamic parameter β of gold nanoparticles from their optical spectra with physics-informed networks.</p>
     <div class="btns">
       <a class="btn primary" data-cv href="#contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Curriculum vitae</a>
+      <a class="btn" href="#publications">Publications</a>
       <a class="btn" href="https://scholar.google.com/citations?user=rNq_DQEAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
       <a class="btn" href="https://orcid.org/0009-0003-9455-277X" target="_blank" rel="noopener">ORCID</a>
       <a class="btn" href="https://github.com/Shaswat-qm-researcher" target="_blank" rel="noopener">GitHub</a>
@@ -118,7 +119,7 @@
 
 <!-- ===================================================== themes ===== -->
 <section id="themes" aria-labelledby="themes-h" style="padding-top:72px">
-  <div class="sec-head"><p class="kicker"><b>§ 00</b> &nbsp;Research interests</p></div>
+  <div class="sec-head"><p class="kicker"><b>00</b> &nbsp;Research interests</p></div>
   <h2 id="themes-h" class="sr">Research interests</h2>
   <div class="themes">
     <a class="card theme rv" href="#r-plasmon">
@@ -142,7 +143,7 @@
 
 <!-- ===================================================== about ===== -->
 <section id="about" aria-labelledby="about-h">
-  <div class="sec-head"><p class="kicker"><b>§ 01</b> &nbsp;About me</p></div>
+  <div class="sec-head"><p class="kicker"><b>01</b> &nbsp;About me</p></div>
   <div class="about">
     <figure class="card portrait rv" style="margin:0">
       <div class="ph"><img src="img/portrait.webp" alt="Shaswat Pathak in a lab coat on the USM campus" width="720" height="960" loading="lazy"></div>
@@ -164,9 +165,60 @@
   </div>
 </section>
 
+<!-- ===================================================== education ===== -->
+<section id="education" aria-labelledby="edu-h">
+  <div class="sec-head"><p class="kicker"><b>02</b> &nbsp;Education &amp; research experience</p></div>
+  <h2 id="edu-h" style="margin-bottom:24px">Education</h2>
+  <div class="card edu rv">
+    <table>
+      <thead><tr><th scope="col">Degree</th><th scope="col">Institution</th><th scope="col">Field of study</th><th scope="col">Mode / academic performance</th><th scope="col">Duration</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><div class="deg">Master of Science (Research)</div></td>
+          <td data-l="Institution"><div class="inst"><img src="img/logo_usm.webp" alt="Universiti Sains Malaysia seal" width="40" height="40" loading="lazy"><div><b>Universiti Sains Malaysia</b><span>School of Physics · Penang, Malaysia</span></div></div></td>
+          <td data-l="Field of study">Theoretical &amp; Computational Physics<br><span class="muted">Specialisation: condensed matter</span></td>
+          <td data-l="Mode / performance"><span class="pill">Research mode</span><span class="pill">Coursework completed</span></td>
+          <td data-l="Duration"><span class="when">Oct 2025 – present</span></td>
+        </tr>
+        <tr>
+          <td colspan="5" style="padding-top:0"><span class="muted" style="font-size:13.5px"><b style="color:var(--ink-2);font-weight:600">Thesis:</b> Physics-informed neural networks for inverse retrieval of nonlocal parameters in quantum plasmonic nanostructures · <b style="color:var(--ink-2);font-weight:600">Supervisor:</b> Prof. Yoon Tiem Leong</span></td>
+        </tr>
+        <tr>
+          <td><div class="deg">Bachelor of Technology</div></td>
+          <td data-l="Institution"><div class="inst"><img src="img/logo_srm.webp" alt="SRM Institute of Science and Technology seal" width="40" height="40" loading="lazy"><div><b>SRM Institute of Science and Technology</b><span>Tamil Nadu, India</span></div></div></td>
+          <td data-l="Field of study">Mechanical Engineering</td>
+          <td data-l="Mode / performance"><span class="pill">Coursework</span><span class="pill">CGPA 9.40 / 10</span><br><span class="muted" style="font-size:13px">10.0 / 10 in the final two semesters</span></td>
+          <td data-l="Duration"><span class="when">Jul 2020 – May 2024</span></td>
+        </tr>
+        <tr>
+          <td colspan="5" style="padding-top:0"><span class="muted" style="font-size:13.5px"><b style="color:var(--ink-2);font-weight:600">Theses:</b> DNN-accelerated GPU cooling design with CFD and particle-swarm optimisation · two-phase heat and mass transfer in a modified double-slope solar still · <b style="color:var(--ink-2);font-weight:600">Supervisors:</b> Dr. Siva Krishna Reddy and Dr. Pankaj Kumar. Physics coursework included electromagnetic theory, wave optics and quantum mechanics.</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="subhead"><h3>Research experience</h3></div>
+  <ol class="tl rv">
+    <li class="key"><div><h4>Project Researcher, Computational Materials Science Lab</h4><div class="org">IIT Kanpur · with Prof. Somnath Bhowmick</div></div><span class="when">Apr – Sep 2025</span>
+      <p>Explainable-ML framework (symbolic regression, latent-space and critical-regime analyses) for the Debye temperature and lattice thermal conductivity; first-principles phonon checks of newly predicted high-Θ<sub>D</sub> ceramics.</p></li>
+    <li><div><h4>Teaching Assistant, High-Performance Computing</h4><div class="org">SRM Institute of Science and Technology</div></div><span class="when">Jan – May 2025</span>
+      <p>Python HPC workflows (NumPy, SciPy, MPI) and numerical methods for PDE-based problems.</p></li>
+    <li><div><h4>Research Trainee</h4><div class="org">Center for Advanced Computational Research, New Delhi</div></div><span class="when">Jun 2024 – Aug 2026</span>
+      <p>DFT with Quantum ESPRESSO and Gaussian; training in TDDFT, harmonic and anharmonic phonons, and elastic constants with thermo_pw.</p></li>
+    <li><div><h4>R&amp;D Intern</h4><div class="org">Fluidyn, Chennai</div></div><span class="when">Jun – Nov 2024</span>
+      <p>Finite-difference solver for radon advection–diffusion, with neural-network and particle-swarm surrogates for flux prediction.</p></li>
+    <li><div><h4>Undergraduate Researcher, Nano &amp; Molecular Simulation Lab</h4><div class="org">SRM Institute of Science and Technology</div></div><span class="when">Nov 2023 – Apr 2025</span>
+      <p>DFT (density of states, ELF, frontier orbitals) of antiviral drug molecules on B–N–Zn-doped γ-graphyne nanotubes.</p></li>
+    <li class="key"><div><h4>Research Intern, Computational Materials Science Lab</h4><div class="org">IIT Kanpur</div></div><span class="when">Jan – Aug 2023</span>
+      <p>Neural-network solvers for the Schrödinger equation; DFT and machine learning for stacking-fault energies, which led to the <i>Phys. Rev. B</i> paper.</p></li>
+    <li><div><h4>Student Researcher, Fluid Dynamics &amp; Electronic Cooling Labs</h4><div class="org">SRM Institute of Science and Technology · with Dr. Siva Krishna Reddy and Dr. Pankaj Kumar</div></div><span class="when">Jun 2022 – May 2024</span>
+      <p>CFD-driven design of solar stills and GPU cooling systems.</p></li>
+  </ol>
+</section>
+
 <!-- ===================================================== research ===== -->
 <section id="research" aria-labelledby="res-h">
-  <div class="sec-head"><p class="kicker"><b>§ 02</b> &nbsp;Research</p></div>
+  <div class="sec-head"><p class="kicker"><b>03</b> &nbsp;Research</p></div>
   <h2 id="res-h" style="margin-bottom:10px">Research</h2>
   <div class="statement rv">
     <p>One thread runs through these projects: finding the few physical quantities that control how a material responds, such as the pressure of the electron gas in a nanoparticle, the elastic moduli behind lattice vibrations, or the fault energies that govern slip, and writing them in a form that can be checked against theory. In my PhD I want to bring this approach to quantum dynamics and quantum materials.</p>
@@ -176,7 +228,7 @@
   <!-- 4.1 plasmonics -->
   <article class="card proj rv" id="r-plasmon">
     <div class="proj-head">
-      <p class="kicker"><b>2.1</b> &nbsp;M.S. thesis · Universiti Sains Malaysia · 2025 –</p>
+      <p class="kicker"><b>3.1</b> &nbsp;M.S. thesis · Universiti Sains Malaysia · 2025 –</p>
       <h3>Quantum-corrected plasmonics, learned backwards</h3>
       <p class="q">When a gold particle is only a few nanometres across, its electrons no longer respond locally to light. Can that nonlocal physics be read directly off an optical spectrum?</p>
     </div>
@@ -213,7 +265,7 @@
   <!-- 4.2 Debye -->
   <article class="card proj rv" id="r-debye">
     <div class="proj-head">
-      <p class="kicker"><b>2.2</b> &nbsp;IIT Kanpur · with Prof. Somnath Bhowmick · 2025</p>
+      <p class="kicker"><b>3.2</b> &nbsp;IIT Kanpur · with Prof. Somnath Bhowmick · 2025</p>
       <h3>A learned law for the Debye temperature</h3>
       <p class="q">Can a machine find the governing physics of lattice vibrations, and then use it to discover new materials?</p>
     </div>
@@ -234,14 +286,14 @@
       <div class="ptip" data-ptip hidden></div>
       <div class="ctl">
         <span>View</span>
-        <div class="seg" role="group" aria-label="View" data-pmode><button type="button" data-m="c" aria-pressed="true">Θ<sub>D</sub> contour</button><button type="button" data-m="t" aria-pressed="false">Θ<sub>D</sub> points</button><button type="button" data-m="f" aria-pressed="false">Classes</button></div>
+        <div class="seg" role="group" aria-label="View" data-pmode><button type="button" data-m="t" aria-pressed="true">Θ<sub>D</sub></button><button type="button" data-m="f" aria-pressed="false">Classes</button></div>
         <span>Regime</span>
         <div class="seg" role="group" aria-label="Debye-temperature regime" data-preg><button type="button" data-r="all" aria-pressed="true">All</button><button type="button" data-r="low" aria-pressed="false">&lt; 350 K</button><button type="button" data-r="high" aria-pressed="false">&gt; 1000 K</button></div>
         <button class="mini" type="button" data-replay>Replay projection</button>
         <span class="sp"></span><span data-pcount></span>
       </div>
       <div class="ctl fams" data-plegend hidden></div>
-      <p class="cap"><b>Live figure: the latent space.</b> 11,509 inorganic materials from Materials Project and AFLOW, first plotted on the raw (G<sub>VRH</sub>, ρ) axes and then projected onto the first two principal components of five standardised descriptors (G<sub>VRH</sub>, E, V<sub>atom</sub>, ρ, Θ<sub>D</sub>), which explain 63.8% and 23.0% of the variance. Arrows are the loadings (×4). <b>Contour</b>: mean Θ<sub>D</sub> smoothed over the latent space (rainbow scale). <b>Classes</b>: the chemical classification of the manuscript, with its marker symbols and the four annotated regions. Pick a critical regime, click a class to isolate it, and hover to identify a compound.</p>
+      <p class="cap"><b>Live figure: the latent space.</b> 11,509 inorganic materials from Materials Project and AFLOW, first plotted on the raw (G<sub>VRH</sub>, ρ) axes and then projected onto the first two principal components of five standardised descriptors (G<sub>VRH</sub>, E, V<sub>atom</sub>, ρ, Θ<sub>D</sub>), which explain 63.8% and 23.0% of the variance. Arrows are the loadings (×4). Points are coloured by Θ<sub>D</sub> on a rainbow scale. <b>Classes</b>: the chemical classification of the manuscript, with its marker symbols and the four annotated regions. Pick a critical regime, click a class to isolate it, and hover to identify a compound.</p>
     </div>
     <div class="stats">
       <div><b>11,509</b><span>inorganic materials analysed</span></div>
@@ -267,7 +319,7 @@
   <!-- 4.3 SFE -->
   <article class="card proj rv" id="r-sfe">
     <div class="proj-head">
-      <p class="kicker"><b>2.3</b> &nbsp;IIT Kanpur · <i>Phys. Rev. B</i> 109, 214102 (2024)</p>
+      <p class="kicker"><b>3.3</b> &nbsp;IIT Kanpur · <i>Phys. Rev. B</i> 109, 214102 (2024)</p>
       <h3>Stacking-fault energies from first principles</h3>
       <p class="q">Slide one half of an fcc crystal over the other. The energy landscape along the way decides how a metal deforms.</p>
     </div>
@@ -296,7 +348,7 @@
   <!-- 4.4 TISE -->
   <article class="card proj rv" id="r-tise">
     <div class="proj-head">
-      <p class="kicker"><b>2.4</b> &nbsp;IIT Kanpur · 2023</p>
+      <p class="kicker"><b>3.4</b> &nbsp;IIT Kanpur · 2023</p>
       <h3>Teaching a network the Schrödinger equation</h3>
       <p class="q">Find a ground state without solving an eigenvalue problem: make the energy as small as the physics allows.</p>
     </div>
@@ -330,7 +382,7 @@
   <!-- 4.5 molecular DFT -->
   <article class="card proj rv" id="r-dft">
     <div class="proj-head">
-      <p class="kicker"><b>2.5</b> &nbsp;Nano &amp; Molecular Simulation Lab, SRMIST · ongoing</p>
+      <p class="kicker"><b>3.5</b> &nbsp;Nano &amp; Molecular Simulation Lab, SRMIST · ongoing</p>
       <h3>Antiviral molecules on doped graphyne nanotubes</h3>
       <p class="q">Where, and how strongly, does a drug molecule bind to a carbon nanotube once it is doped with boron and zinc?</p>
     </div>
@@ -360,7 +412,7 @@
 
 <!-- ===================================================== publications ===== -->
 <section id="publications" aria-labelledby="pub-h">
-  <div class="sec-head"><p class="kicker"><b>§ 03</b> &nbsp;Publications</p></div>
+  <div class="sec-head"><p class="kicker"><b>04</b> &nbsp;Publications</p></div>
   <h2 id="pub-h" style="margin-bottom:22px">Publications</h2>
   <div class="filters" role="group" aria-label="Filter publications">
     <button class="chip" type="button" data-f="all" aria-pressed="true">All<small data-n="all"></small></button>
@@ -437,60 +489,9 @@
   <p class="pubnote">Full list and citations on <a href="https://scholar.google.com/citations?user=rNq_DQEAAAAJ" target="_blank" rel="noopener">Google Scholar</a> and <a href="https://orcid.org/0009-0003-9455-277X" target="_blank" rel="noopener">ORCID</a>.</p>
 </section>
 
-<!-- ===================================================== education ===== -->
-<section id="education" aria-labelledby="edu-h">
-  <div class="sec-head"><p class="kicker"><b>§ 04</b> &nbsp;Education &amp; research experience</p></div>
-  <h2 id="edu-h" style="margin-bottom:24px">Education</h2>
-  <div class="card edu rv">
-    <table>
-      <thead><tr><th scope="col">Degree</th><th scope="col">Institution</th><th scope="col">Field of study</th><th scope="col">Mode / academic performance</th><th scope="col">Duration</th></tr></thead>
-      <tbody>
-        <tr>
-          <td><div class="deg">Master of Science (Research)</div></td>
-          <td data-l="Institution"><div class="inst"><img src="img/logo_usm.webp" alt="Universiti Sains Malaysia seal" width="40" height="40" loading="lazy"><div><b>Universiti Sains Malaysia</b><span>School of Physics · Penang, Malaysia</span></div></div></td>
-          <td data-l="Field of study">Theoretical &amp; Computational Physics<br><span class="muted">Specialisation: condensed matter</span></td>
-          <td data-l="Mode / performance"><span class="pill">Research mode</span><span class="pill">Coursework completed</span></td>
-          <td data-l="Duration"><span class="when">Oct 2025 – present</span></td>
-        </tr>
-        <tr>
-          <td colspan="5" style="padding-top:0"><span class="muted" style="font-size:13.5px"><b style="color:var(--ink-2);font-weight:600">Thesis:</b> Physics-informed neural networks for inverse retrieval of nonlocal parameters in quantum plasmonic nanostructures · <b style="color:var(--ink-2);font-weight:600">Supervisor:</b> Prof. Yoon Tiem Leong</span></td>
-        </tr>
-        <tr>
-          <td><div class="deg">Bachelor of Technology</div></td>
-          <td data-l="Institution"><div class="inst"><img src="img/logo_srm.webp" alt="SRM Institute of Science and Technology seal" width="40" height="40" loading="lazy"><div><b>SRM Institute of Science and Technology</b><span>Tamil Nadu, India</span></div></div></td>
-          <td data-l="Field of study">Mechanical Engineering</td>
-          <td data-l="Mode / performance"><span class="pill">Coursework</span><span class="pill">CGPA 9.40 / 10</span><br><span class="muted" style="font-size:13px">10.0 / 10 in the final two semesters</span></td>
-          <td data-l="Duration"><span class="when">Jul 2020 – May 2024</span></td>
-        </tr>
-        <tr>
-          <td colspan="5" style="padding-top:0"><span class="muted" style="font-size:13.5px"><b style="color:var(--ink-2);font-weight:600">Theses:</b> DNN-accelerated GPU cooling design with CFD and particle-swarm optimisation · two-phase heat and mass transfer in a modified double-slope solar still · <b style="color:var(--ink-2);font-weight:600">Supervisors:</b> Dr. Siva Krishna Reddy and Dr. Pankaj Kumar. Physics coursework included electromagnetic theory, wave optics and quantum mechanics.</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="subhead"><h3>Research experience</h3></div>
-  <ol class="tl rv">
-    <li class="key"><div><h4>Project Researcher, Computational Materials Science Lab</h4><div class="org">IIT Kanpur · with Prof. Somnath Bhowmick</div></div><span class="when">Apr – Sep 2025</span>
-      <p>Explainable-ML framework (symbolic regression, latent-space and critical-regime analyses) for the Debye temperature and lattice thermal conductivity; first-principles phonon checks of newly predicted high-Θ<sub>D</sub> ceramics.</p></li>
-    <li><div><h4>Teaching Assistant, High-Performance Computing</h4><div class="org">SRM Institute of Science and Technology</div></div><span class="when">Jan – May 2025</span>
-      <p>Python HPC workflows (NumPy, SciPy, MPI) and numerical methods for PDE-based problems.</p></li>
-    <li><div><h4>Research Trainee</h4><div class="org">Center for Advanced Computational Research, New Delhi</div></div><span class="when">Jun 2024 – Aug 2026</span>
-      <p>DFT with Quantum ESPRESSO and Gaussian; training in TDDFT, harmonic and anharmonic phonons, and elastic constants with thermo_pw.</p></li>
-    <li><div><h4>R&amp;D Intern</h4><div class="org">Fluidyn, Chennai</div></div><span class="when">Jun – Nov 2024</span>
-      <p>Finite-difference solver for radon advection–diffusion, with neural-network and particle-swarm surrogates for flux prediction.</p></li>
-    <li><div><h4>Undergraduate Researcher, Nano &amp; Molecular Simulation Lab</h4><div class="org">SRM Institute of Science and Technology</div></div><span class="when">Nov 2023 – Apr 2025</span>
-      <p>DFT (density of states, ELF, frontier orbitals) of antiviral drug molecules on B–N–Zn-doped γ-graphyne nanotubes.</p></li>
-    <li class="key"><div><h4>Research Intern, Computational Materials Science Lab</h4><div class="org">IIT Kanpur</div></div><span class="when">Jan – Aug 2023</span>
-      <p>Neural-network solvers for the Schrödinger equation; DFT and machine learning for stacking-fault energies, which led to the <i>Phys. Rev. B</i> paper.</p></li>
-    <li><div><h4>Student Researcher, Fluid Dynamics &amp; Electronic Cooling Labs</h4><div class="org">SRM Institute of Science and Technology · with Dr. Siva Krishna Reddy and Dr. Pankaj Kumar</div></div><span class="when">Jun 2022 – May 2024</span>
-      <p>CFD-driven design of solar stills and GPU cooling systems.</p></li>
-  </ol>
-</section>
-
 <!-- ===================================================== code ===== -->
 <section id="code" aria-labelledby="code-h">
-  <div class="sec-head"><p class="kicker"><b>§ 05</b> &nbsp;Code &amp; methods</p></div>
+  <div class="sec-head"><p class="kicker"><b>05</b> &nbsp;Code &amp; methods</p></div>
   <h2 id="code-h" style="margin-bottom:24px">Code &amp; methods</h2>
   <!-- HOW TO ADD SOFTWARE OR A CODE REPOSITORY
        1. Copy one whole <a class="card repo rv" ...> ... </a> block below and paste it where you want it.
@@ -528,7 +529,7 @@
 
 <!-- ===================================================== honours & talks ===== -->
 <section id="honours" aria-labelledby="hon-h">
-  <div class="sec-head"><p class="kicker"><b>§ 06</b> &nbsp;Honours &amp; talks</p></div>
+  <div class="sec-head"><p class="kicker"><b>06</b> &nbsp;Honours &amp; talks</p></div>
   <h2 id="hon-h" class="sr">Honours and talks</h2>
   <div class="two">
     <div class="card list rv">
@@ -558,7 +559,7 @@
 
 <!-- ===================================================== contact ===== -->
 <section id="contact" aria-labelledby="con-h">
-  <div class="sec-head"><p class="kicker"><b>§ 07</b> &nbsp;Contact</p></div>
+  <div class="sec-head"><p class="kicker"><b>07</b> &nbsp;Contact</p></div>
   <div class="contact">
     <div class="card main rv">
       <h3 id="con-h">Get in touch</h3>
@@ -601,9 +602,9 @@
   /* ---- site settings: paste a public link to your CV PDF here ---- */
   window.SITE = { cv: "cv/Shaswat_Pathak_CV.pdf" };
 </script>
-<script src="assets/site.js?v=27" defer></script>
-<script src="assets/mol-data.js?v=27" defer></script>
-<script src="assets/debye-data.js?v=27" defer></script>
-<script src="assets/viz.js?v=27" defer></script>
+<script src="assets/site.js?v=30" defer></script>
+<script src="assets/mol-data.js?v=30" defer></script>
+<script src="assets/debye-data.js?v=30" defer></script>
+<script src="assets/viz.js?v=30" defer></script>
 </body>
 </html>
